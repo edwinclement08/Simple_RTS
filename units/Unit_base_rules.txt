@@ -1,0 +1,45 @@
+Things to define in the subclass of:-
+
+
+                <<1>> unit_non_attacking
+    Variables
+name = <string> # name of unit
+type = <type_name> # only if unit is mot a  building
+health = <int>
+image_file = <string> # is the filename of images
+w = <int> \_ # width and height(no of tiles)
+h = <int> /
+selection_options = <dict> # holds the options the object shows when selected
+frame_delay_time =<int> # time each frame is delayed; default is 200
+
+    Methods
+do_selection(selected_option) # Obvious
+
+any_other_stuff() # Obvious
+
+    Variables
+name = <string> # name of building
+type = 'building'||'unit' # to know whether it is movable
+attacks = True||False # to know whether it attacks
+attacking_power = <int>  \
+range = <int>            |_ Obvious
+speed = 1||2||3            |
+health = <int>           /
+destroyed = True||False # is the unit destroyed
+image_file = <string> # is the filename of images
+w = <int> \_ # width and height(no of tiles)
+h = <int> /
+selection_options = <dict> # holds the options the object shows when selected
+
+    Methods
+move(path_as_tile_by_tile_movement_in_list # obvious,use pixel-by-pixel movement internally
+                                           # use some instance variable to depict time last displaced
+                                           # and the movements left
+attack(<tuple(x,y)>) # obvious
+                     # first check in range or not
+
+update() # updates the surface
+         # overwrite this if unit is attacker
+
+do_selection(selected_option) # Obvious
+

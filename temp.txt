@@ -1,0 +1,4 @@
+            K_LEFT: (self.parent.map.move_pos, -1,0),
+            K_UP: (self.parent.map.move_pos, 0,-1),
+            K_DOWN: (self.parent.map.move_pos, 0,+1),
+            K_RIGHT: (self.parent.map.move_pos, +1,0),

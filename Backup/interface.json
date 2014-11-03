@@ -1,0 +1,8 @@
+{
+ "transparent_color":[255,255,255],
+ "border.left":[0,80,19,639],
+ "border.right":[40,80,59,639],
+ "border.top":[0,0,759,20],
+ "border.bottom":[0,40,759,595],
+ "corner":[80,80,99,99]
+}

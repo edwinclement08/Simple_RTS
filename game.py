@@ -1,0 +1,170 @@
+__author__ = 'Edwin Clement'
+import json
+import pygame
+import sys
+from pygame.locals import *
+sys.path[0:0] = ("units",)
+import unit_base
+
+class player():
+    def __init__(self, parent):
+        self.parent = parent
+        self.money = 1000
+        self.power = 1
+        self.units = []
+
+        self.low_power = False
+        self.req_power = 1.0
+
+    def update(self):
+        self.power_update()
+        self.check_for_enough_power()
+
+    def power_update(self):
+        p = 1
+        for t in self.units:
+            if isinstance(t, unit_base.generator):
+                p += 5  # power supplied by one generator
+        self.power = p
+
+    def check_for_enough_power(self):
+        req_power = 0
+        for t in self.units:
+            if isinstance(t, unit_base.resource_center) or isinstance(t, unit_base.artillery_shop) or \
+                    isinstance(t, unit_base.helipad):
+                req_power += t.power
+        self.req_power = req_power
+        if self.power < self.req_power:
+            self.low_power = True
+        else:
+            self.low_power = False
+
+
+class GameData:
+    def __init__(self,parent):
+        self.time = 0
+        self.units = []
+        self.places_occupied = [[0]*100 for d in range(100)]
+        self.places_truly_empty = [[0]*100 for d in range(100)]
+        self.parent = parent
+
+        self.screen = pygame.Surface((self.parent.map.window_w*20,self.parent.map.window_h*20)).convert()
+        self.screen.set_colorkey((0, 128, 128))
+
+        self.conv = lambda x, y: ((x-self.parent.map.x_offset)/20+self.parent.map.cur_pos[0],
+                                 (y-self.parent.map.y_offset)/20+self.parent.map.cur_pos[1])
+
+        self.selection = None
+
+    def update(self):
+        self.screen.fill((0, 128, 128))
+
+        for m in self.units:
+            x = (m[1] - self.parent.map.cur_pos[0])*20+self.parent.map.x_offset
+            y = (m[2] - self.parent.map.cur_pos[1])*20+self.parent.map.y_offset
+            m[0].update()
+            if isinstance(m, unit_base.unit_attacking):
+                x += m.dx
+                y += m.dy
+            self.screen.blit(m[0].display_image, (x, y))
+
+        for y in range(100):
+            for x in range(100):
+                self.places_truly_empty[y][x] = self.is_place_truly_empty(x, y)
+
+    def place_unit(self, unit):
+        x, y = unit.position
+        if 0 < x < 99 and 0 < y < 99:
+            if self.parent.map.is_cell_free(x, y) and self.is_place_empty(x,y):
+                self.units.append([unit, x, y])
+                unit.x, unit.y = x,y
+                sw,sh = unit.w, unit.h
+                for my in range(sh):
+                    for mx in range(sw):
+                        self.places_occupied[y+my][x+mx] = 1
+
+    def move_unit(self, unit, (x, y), direction):
+        w, h = unit.w, unit.h
+        dx, dy = x + direction[0], y + direction[1]
+
+        for ly in range(y, y+h):
+            for lx in range(x, x+w):
+                self.places_occupied[y][x] = 0
+
+        for ly in range(dy, dy+h):
+            for lx in range(dx, dx+w):
+                self.places_occupied[y][x] = 1
+
+        array = unit.allegiance.units
+        for e in array:
+            if e[0] == unit:
+                e[1], e[2] = dx, dy
+
+    def is_place_empty(self, x, y):
+        if not self.places_occupied[y][x]:
+            return True
+        else:
+            return False
+
+    def is_place_truly_empty(self, x, y):
+        if not self.places_occupied[y][x] and self.parent.map.is_cell_free(x,y):
+            return 1
+        else:
+            return 0
+
+    def get_unit(self, x, y):
+        if not self.is_place_empty(x,y):
+            for w in self.units:
+                x0, y0 = w[0].x, w[0].y
+                sw, sh = w[0].w, w[0].h
+                for my in range(y0, y0+sh):
+                    for mx in range(x0,x0+sw):
+                        if (mx, my) == (x, y):
+                            return w[0], x0, y0, sw, sh
+        return None
+
+    def select_unit(self, x, y, allegiance):
+        if not self.is_place_empty(x, y):
+            for w in self.units:
+                x0, y0 = w[0].x, w[0].y
+                sw, sh = w[0].w, w[0].h
+                for my in range(y0, y0+sh):
+                    for mx in range(x0, x0+sw):
+                        if (mx, my) == (x, y):
+                            if allegiance == w[0].allegiance:
+                                self.selection = [w[0], x0, y0, sw, sh]
+                                return w[0], x0, y0, sw, sh
+        return None
+
+    def select_units(self,m0, n0,m1, n1, allegiance):
+        anything_present = False
+        points_of_interest = []
+        selection = set([])
+        x0,y0 = self.conv(m0, n0)
+        x1,y1 = self.conv(m1, n1)
+        for x in range(x0,x1+1):
+            for y in range(y0,y1+1):
+                if not self.is_place_empty(x,y):
+                    anything_present = True
+                    points_of_interest.append((x,y))
+        if anything_present:
+            for x, y in points_of_interest:
+                for w in self.units:
+                    if (w[1], w[2]) == (x, y):
+                        x0, y0 = w[0].x, w[0].y
+                        x1, y1 = w[0].w + w[0].x, w[0].h + w[0].y
+                        if allegiance == w[0].allegiance:
+                            selection.add((w[0], x0, y0, w[0].w, w[0].h))
+            self.selection = list(selection)
+            return list(selection)
+        return None
+
+    def delete_unit(self,unit):
+        self.units.remove(unit)
+        sw,sh = unit.w, unit.h
+        x,y = unit.x, unit.y
+        for my in range(sh):
+            for mx in range(sw):
+                self.places_occupied[y+my][x+mx] = 0
+        del unit
+
