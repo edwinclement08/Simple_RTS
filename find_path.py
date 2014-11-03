@@ -141,7 +141,7 @@ class AStar:
                             heappop(pq[pqi])
                         pqi = 1 - pqi
                         heappush(pq[pqi], m0)  # add the better node instead
-        return []  # no route found
+        return []  # no route
 
     def get_path(self, (x, y), (x1, y1)):
         directions = 8
