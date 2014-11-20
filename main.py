@@ -5,6 +5,7 @@ from pygame.locals import *
 from map_display import *
 from interface import *
 from game import *
+from find_path import *
 sys.path[0:0] = ("units",)
 from unit_base import *
 from message_box import *
@@ -36,12 +37,15 @@ class Main():
         self.pathfinder = AStar(self)
 
         self.game_data.place_unit(command_center(self.human, 10, 10, self))
-        # m = resource_center(self.human, 14, 14)
-        # self.game_data.place_unit(m)
-        # self.human.units.append(m)
-        # m = helipad(self.human, 10, 16)
-        # self.human.units.append(m)
-        # self.game_data.place_unit(m)
+
+        m = resource_center(self.human, 14, 14)
+        self.game_data.place_unit(m)
+        self.human.units.append(m)
+        m = helipad(self.human, 16, 16)
+        self.human.units.append(m)
+        self.game_data.place_unit(m)
+
+        self.first_run = 1
 
         self.mainloop()
 
@@ -63,6 +67,29 @@ class Main():
             self.screen.blit(self.game_data.screen, (0, 0))
             self.screen.blit(self.interface.screen, (0, 0))
             self.screen.blit(self.message.screen, (0, 0))
+
+            if self.first_run:
+                self.first_run += 1
+            if self.first_run == 290:
+
+                startx, starty, endx, endy = (0, 10, 12, 0)
+                c = self.pathfinder.get_path((0, 10), (12, 0))
+                print "dsfv", c
+                for t in c:
+                    startx += t[0]
+                    starty += t[1]
+
+                print "yo Man (", startx, ",", starty, ") and ", endx, endy
+            if self.first_run == 467:
+                self.first_run = False
+                startx, starty, endx, endy = (0, 10, 12, 0)
+                c = self.pathfinder.get_path((0, 10), (12, 0))
+                print "dsfv", c
+                for t in c:
+                    startx += t[0]
+                    starty += t[1]
+
+                print "yo Man (", startx, ",", starty, ") and ",endx,endy
 
             self.true_screen.blit(self.screen, (0, 0))
             pygame.display.update()

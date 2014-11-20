@@ -6,6 +6,7 @@ from heapq import heappush, heappop # for priority queue
 import math
 
 
+
 class node:
     # current position
     xPos = 0
@@ -22,7 +23,7 @@ class node:
     def __lt__(self, other): # for priority queue
         return self.priority < other.priority
     def updatePriority(self, xDest, yDest):
-        self.priority = self.distance + self.estimate(xDest, yDest) * 10  # A*
+        self.priority = self.distance + self.estimate(xDest, yDest) * 10 # A*
     # give better priority to going straight instead of diagonally
 
     def nextdistance(self, i): # i: direction
@@ -47,7 +48,6 @@ class node:
 # A-star algorithm.
 # Path returned will be a string of digits of directions.
 class AStar:
-
     def __init__(self, parent):
         self.parent = parent
 
@@ -70,6 +70,7 @@ class AStar:
         heappush(pq[pqi], n0)
         open_nodes_map[yStart][xStart] = n0.priority # mark it on the open nodes map
 
+
         # A* search
         while len(pq[pqi]) > 0:
             # get the current node w/ the highest priority
@@ -82,6 +83,8 @@ class AStar:
             open_nodes_map[y][x] = 0
             # mark it on the closed nodes map
             closed_nodes_map[y][x] = 1
+            # print pq
+            # print x == xFinish, yFinish == y
 
             # quit searching when the goal state is reached
             # if n0.estimate(xFinish, yFinish) == 0:
@@ -92,10 +95,10 @@ class AStar:
                 while not (x == xStart and y == yStart):
                     j = dir_map[y][x]
                     c = str((j + directions / 2) % directions)
-
                     path = str(c) + path
                     x += dx[j]
                     y += dy[j]
+                # print path+ " rge'"
 
                 rpath = []
                 for e in path:
@@ -107,13 +110,17 @@ class AStar:
             for i in range(directions):
                 xdx = x + dx[i]
                 ydy = y + dy[i]
-                if not (xdx < 0 or xdx > n-1 or ydy < 0 or ydy > m - 1
-                        or the_map[ydy][xdx] == 1 or closed_nodes_map[ydy][xdx] == 1):
+                # print xdx,ydy
+                print "(" + str(xdx) + ", " + str(ydy) + ")",
+                print the_map[ydy][xdx], closed_nodes_map[ydy][xdx]
+                if not (xdx < 0 or xdx > n-1 or ydy < 0 or ydy > m - 1 or the_map[ydy][xdx] == 1 or closed_nodes_map[ydy][xdx] == 1):
                     # generate a child node
-
+                    # print 'af'
                     m0 = node(xdx, ydy, n0.distance, n0.priority)
+
                     m0.nextdistance(i)
                     m0.updatePriority(xFinish, yFinish)
+                    # print m0
                     # if it is not in the open list then add into that
                     if open_nodes_map[ydy][xdx] == 0:
                         open_nodes_map[ydy][xdx] = m0.priority
@@ -132,7 +139,7 @@ class AStar:
                         while not (pq[pqi][0].xPos == xdx and pq[pqi][0].yPos == ydy):
                             heappush(pq[1 - pqi], pq[pqi][0])
                             heappop(pq[pqi])
-                        heappop(pq[pqi])
+                        heappop(pq[pqi]) # remove the wanted node
                         # empty the larger size pq to the smaller one
                         if len(pq[pqi]) > len(pq[1 - pqi]):
                             pqi = 1 - pqi
@@ -140,24 +147,29 @@ class AStar:
                             heappush(pq[1-pqi], pq[pqi][0])
                             heappop(pq[pqi])
                         pqi = 1 - pqi
-                        heappush(pq[pqi], m0)  # add the better node instead
+                        heappush(pq[pqi], m0) # add the better node instead
+
+
         return []  # no route
 
-    def get_path(self, (x, y), (x1, y1)):
+    def get_path(self, (x0, y0), (x1, y1)):
         directions = 8
-        dx = [1, 1, 0, -1, -1, -1, 0, 1]
-        dy = [0, 1, 1, 1, 0, -1, -1, -1]
+        dx = [1, 1, 0, -1, -1, -1, +0, +1]
+        dy = [0, 1, 1, +1, +0, -1, -1, -1]
 
         the_invert_map = self.parent.game_data.places_truly_empty  # [[0]*100 for d in range(100)]  #
         # for y in range(100):
         #     for x in range(100):
         #         if the_invert_map[y][x] =
-        the_map = [[0 if the_invert_map[y][x] else 1 for x in range(100)] for y in range(100)]
-        print the_map
-        # print the_map
 
-        route = self.pathFind(the_map, directions, dx, dy, x, y, x1, y1)
-        print route
+        the_map = [[0 if the_invert_map[uy][ux] else 1 for ux in range(100)] for uy in range(100)]
+        # print the_map
+        # the_map = [[0]*100 for t in range(100)]
+
+        print x0,y0,the_map[y0][x0]
+        print x1,y1,the_map[y1][x1]
+
+        route = self.pathFind(the_map, directions, dx, dy, x0, y0, x1, y1)
         return route
 
 
