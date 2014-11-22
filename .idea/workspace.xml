@@ -528,7 +528,11 @@
       <created>1416648950928</created>
       <updated>1416648950928</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="New changelist">
+      <created>1416648965468</created>
+      <updated>1416648965468</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
