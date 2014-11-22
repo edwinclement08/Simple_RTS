@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae14d48d-2ffe-4264-a17e-9c1639b5a9c2" name="New changelist" comment="New changelist">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Edwin_Clement.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Edwin_Clement.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/find_path.py" afterPath="$PROJECT_DIR$/find_path.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old_pf.py" afterPath="$PROJECT_DIR$/old_pf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project python 2014 RTS.iws" />
@@ -55,8 +51,8 @@
       <file leaf-file-name="pathfinder=new.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pathfinder=new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65357965" vertical-offset="726" max-vertical-offset="1615">
-              <caret line="76" column="39" selection-start-line="73" selection-start-column="31" selection-end-line="76" selection-end-column="39" />
+            <state vertical-scroll-proportion="1.2358079" vertical-offset="794" max-vertical-offset="1683">
+              <caret line="80" column="40" selection-start-line="71" selection-start-column="23" selection-end-line="80" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -171,7 +167,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers ProjectPane="true" />
       <showModules />
@@ -182,29 +178,7 @@
       <autoscrollFromSource />
       <sortByType ProjectPane="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project python 2014 RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project python 2014 RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.lastSelected" value="appearance" />
@@ -546,7 +520,11 @@
       <created>1415641778746</created>
       <updated>1415641778746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="New changelist">
+      <created>1416509843358</created>
+      <updated>1416509843358</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -572,9 +550,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45722714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45698324" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46031746" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.49962825" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,7 +560,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38994414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991555" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28064993" sideWeight="0.40591073" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30614525" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1023,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pathfinder=new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65357965" vertical-offset="726" max-vertical-offset="1615">
-          <caret line="76" column="39" selection-start-line="73" selection-start-column="31" selection-end-line="76" selection-end-column="39" />
+        <state vertical-scroll-proportion="1.2358079" vertical-offset="794" max-vertical-offset="1683">
+          <caret line="80" column="40" selection-start-line="71" selection-start-column="23" selection-end-line="80" selection-end-column="40" />
           <folding />
         </state>
       </provider>
