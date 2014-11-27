@@ -2,6 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae14d48d-2ffe-4264-a17e-9c1639b5a9c2" name="New changelist" comment="27/11 &#10;12.14 pm">
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Box.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Master.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Minibox.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Title_bar.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\draw_entire_map.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\gray_out_area.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Arrangement-backup.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Arrangement.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Crater.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Crtr2Wtr.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Game(old).json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\GrasClif.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\GrasRoad.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Grass2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Grs2CrtB.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master-backup.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master-backup2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Mines.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\TreeGrs.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\attack1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\attack2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\harvest.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\harvest2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\move1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\move2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\pandown.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panleft.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panright.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panup.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\select.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\dsffsdctemp.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\gold-cutout.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\gold.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\interface.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\json-ifier.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\make into matrix.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\map.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tile_data.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tree1.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tree2.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial2.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial_json.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial_loadimage.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\v.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Artillery_turret.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Generator.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Factory3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Field.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Silo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Televatr.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Televtr2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\TradPlat.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\artillery_shop.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\command_center.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\helipad.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\machine_turret.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\resource_center.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullet.1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullet2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullets.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Cursor1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Flag.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Flame.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Marker.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Outline.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Outline2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Selected.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\expSmall.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\exploBig.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\explosn.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Artil.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Artil3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Balloon1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Boat2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Boat3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder4.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder5.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Copter.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Copter2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Miner.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Scout1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Scout2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank10.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank11.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank12.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank13.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank14.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank15.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank16.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank4.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank5.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank6.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank7.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank8.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank9.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Transprt.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\main.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map (2).json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map_display (2).py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map_display.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\pathfinder.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\pathfinder_2.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\terrain.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\get_neighbour_testing.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\old_pf.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\pathfinder=new.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\pathfinding.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\ArtlFlsh.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Blood1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullet.1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullet2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullets.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cursor1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Dark.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Electric.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Embossed.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Face1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Flag.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Flame.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Font.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Icons.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Junk.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Marker.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Mines.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Muzzle.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Objects.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Outline.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Outline2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Selected.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Sparks.anim" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Teleport.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Teleprt2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test4.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\expSmall.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\exploBig.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\explosn.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\bullet.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\rsrssbvrs.py.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Balloon1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Boat2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2a.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Tank16.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Copter.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_3.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_4.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\temp.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\temp_units.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface.py" afterPath="$PROJECT_DIR$/interface.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project python 2014 RTS.iws" />
@@ -31,28 +204,8 @@
       <file leaf-file-name="unit_base.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/units/unit_base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="391.5" vertical-offset="8812" max-vertical-offset="9982">
+            <state vertical-scroll-proportion="0.0" vertical-offset="7276" max-vertical-offset="8347">
               <caret line="428" column="41" selection-start-line="428" selection-start-column="41" selection-end-line="428" selection-end-column="41" />
-              <folding>
-                <element signature="e#163#4078#0" expanded="false" />
-                <element signature="e#294#1710#0" expanded="false" />
-                <element signature="e#1753#1936#0" expanded="false" />
-                <element signature="e#1968#2903#0" expanded="false" />
-                <element signature="e#2944#3096#0" expanded="false" />
-                <element signature="e#3140#3901#0" expanded="false" />
-                <element signature="e#9504#10161#0" expanded="false" />
-                <element signature="e#10210#10453#0" expanded="false" />
-                <element signature="e#12224#12378#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map_display.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map_display.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="878" max-vertical-offset="1598">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -61,7 +214,7 @@
       <file leaf-file-name="game.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1464.0" vertical-offset="0" max-vertical-offset="4416">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3179">
               <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
               <folding />
             </state>
@@ -71,8 +224,8 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1275">
-              <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1377">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -81,8 +234,8 @@
       <file leaf-file-name="interface.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4673913" vertical-offset="2505" max-vertical-offset="10300">
-              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+            <state vertical-scroll-proportion="-3.631068" vertical-offset="7196" max-vertical-offset="10857">
+              <caret line="220" column="48" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -124,9 +277,9 @@
         <option value="$PROJECT_DIR$/find_path.py" />
         <option value="$PROJECT_DIR$/units/unit_base.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/interface.py" />
         <option value="$PROJECT_DIR$/map_display.py" />
         <option value="$PROJECT_DIR$/game.py" />
+        <option value="$PROJECT_DIR$/interface.py" />
       </list>
     </option>
   </component>
@@ -169,7 +322,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers ProjectPane="true" />
       <showModules />
@@ -180,29 +333,7 @@
       <autoscrollFromSource />
       <sortByType ProjectPane="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project python 2014 RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project python 2014 RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -584,7 +715,11 @@
       <created>1417113880685</created>
       <updated>1417113880685</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="27/11 &#10;12.14 pm">
+      <created>1417113901538</created>
+      <updated>1417113901538</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -610,26 +745,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4541387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4541387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46031746" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.49962825" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.72930646" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956952" sideWeight="0.65048546" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16525935" sideWeight="0.9736477" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38882682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991555" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28064993" sideWeight="0.40591073" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16331096" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2785235" sideWeight="0.40591073" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1631285" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.72930646" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40223464" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40223464" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -682,19 +817,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/units/unit_base.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8347">
+          <caret line="428" column="41" selection-start-line="428" selection-start-column="41" selection-end-line="428" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3179">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1377">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="8789">
+          <caret line="223" column="25" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/units/unit_base.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2482">
           <caret line="406" column="76" selection-start-line="406" selection-start-column="76" selection-end-line="406" selection-end-column="76" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -726,17 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4114" max-vertical-offset="8313">
           <caret line="265" column="15" selection-start-line="265" selection-start-column="15" selection-end-line="265" selection-end-column="15" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -768,17 +915,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4114" max-vertical-offset="8313">
           <caret line="270" column="14" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,17 +947,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8313">
           <caret line="218" column="21" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="21" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -874,17 +1001,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="8432">
           <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -903,113 +1020,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pathfinding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pathfinder=new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.157277" vertical-offset="748" max-vertical-offset="1768">
-          <caret line="15" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_neighbour_testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/units/ArtlFlsh.bmp">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp_units.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4352">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/count_lines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message_box.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old_pf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13239875" vertical-offset="0" max-vertical-offset="3638">
-          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/find_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="3009">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/units/unit_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="391.5" vertical-offset="8812" max-vertical-offset="9982">
-          <caret line="428" column="41" selection-start-line="428" selection-start-column="41" selection-end-line="428" selection-end-column="41" />
-          <folding>
-            <element signature="e#163#4078#0" expanded="false" />
-            <element signature="e#294#1710#0" expanded="false" />
-            <element signature="e#1753#1936#0" expanded="false" />
-            <element signature="e#1968#2903#0" expanded="false" />
-            <element signature="e#2944#3096#0" expanded="false" />
-            <element signature="e#3140#3901#0" expanded="false" />
-            <element signature="e#9504#10161#0" expanded="false" />
-            <element signature="e#10210#10453#0" expanded="false" />
-            <element signature="e#12224#12378#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_display.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="878" max-vertical-offset="1598">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2349">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1464.0" vertical-offset="0" max-vertical-offset="4416">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3179">
           <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/find_path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1377">
-          <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2992">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/count_lines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11805555" vertical-offset="0" max-vertical-offset="720">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message_box.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.023611112" vertical-offset="425" max-vertical-offset="1547">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80138886" vertical-offset="732" max-vertical-offset="1598">
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/units/unit_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7276" max-vertical-offset="8347">
+          <caret line="428" column="41" selection-start-line="428" selection-start-column="41" selection-end-line="428" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4673913" vertical-offset="2505" max-vertical-offset="10300">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+        <state vertical-scroll-proportion="-3.631068" vertical-offset="7196" max-vertical-offset="10857">
+          <caret line="220" column="48" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
           <folding />
         </state>
       </provider>

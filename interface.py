@@ -219,15 +219,16 @@ class Interface:
         if self.multiple_selected:
             startx, starty, padx, pady = nx-45, ny-8, 5, 5
             number = len(self.multiple_selected)
-            numx, numy = number % 3,  number / 3
+            # numx, numy = number % 3,  number / 3
+            # print numx, numy
             dx, dy = 0, 0
             pos = 0
             for imaager in self.image_for_selection:
-                lx, ly = startx + padx*dx + 40*dx, starty + pady*dy
+                lx, ly = startx + padx*dx + 40*dx, starty + pady*dy + dy*40
                 self.multi_sel_image_init_points.append(((lx, ly), self.multiple_selected[pos][0]))
                 self.screen.blit(imaager, (lx, ly))
                 dx += 1
-                if dx == numx:
+                if dx == 3:
                     dx = 0
                     dy += 1
                 pos += 1
@@ -436,6 +437,7 @@ class Interface:
                         self.multiple_selected = sel[:9]
                         self.selected_unit = False
                         self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
+                        # print self.image_for_selection
                         self.selected_options = None
 
             elif event.type == MOUSEMOTION:
