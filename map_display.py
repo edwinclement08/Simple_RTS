@@ -57,29 +57,29 @@ class Map:
 
     def update(self):
         y0 = 0
-        for y in range(self.cur_pos[1], self.cur_pos[1]+self.window_h):
+        for y in xrange(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
-            for x in range(self.cur_pos[0], self.cur_pos[0]+self.window_w):
+            for x in xrange(self.cur_pos[0], self.cur_pos[0]+self.window_w):
                 self.screen.blit(self.image_dict[self.main_layer[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
                 x0 += 1
             y0+=1
 
         y0 = 0
-        for y in range(self.cur_pos[1], self.cur_pos[1]+self.window_h):
+        for y in xrange(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
-            for x in range(self.cur_pos[0], self.cur_pos[0]+self.window_w):
+            for x in xrange(self.cur_pos[0], self.cur_pos[0]+self.window_w):
                 self.screen.blit(self.image_dict[self.overlay[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
                 x0 += 1
             y0 += 1
 
-    def is_cell_free(self,x,y):
-        if self.image_dict[self.main_layer[y][x]][1] in ["grass.rough","grass.smooth"]:
+    def is_cell_free(self, x, y):
+        if self.image_dict[self.main_layer[y][x]][1] in ["grass.rough", "grass.smooth"]:
             return True
         else:
             return False
 
-    def is_cell_movable(self,x,y):
-        if self.image_dict[self.main_layer[y][x]][1].split('.')[0] in ["grass","mine","road"]:
+    def is_cell_movable(self, x, y):
+        if self.image_dict[self.main_layer[y][x]][1].split('.')[0] in ["grass", "mine", "road"]:
             return True
         else:
             return False

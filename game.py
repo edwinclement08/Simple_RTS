@@ -114,7 +114,7 @@ class GameData:
             return False
 
     def is_place_truly_empty(self, x, y):
-        if not self.places_occupied[y][x] and self.parent.map.is_cell_free(x, y):
+        if not self.places_occupied[y][x] and self.parent.map.is_cell_movable(x, y):
             return 1
         else:
             return 0
@@ -126,8 +126,8 @@ class GameData:
             for w in self.units:
                 x0, y0 = w[0].position[0], w[0].position[1]
                 sw, sh = w[0].w, w[0].h
-                for my in range(y0, y0+sh):
-                    for mx in range(x0, x0+sw):
+                for my in xrange(y0, y0+sh):
+                    for mx in xrange(x0, x0+sw):
                         if (mx, my) == (x, y):
                             return w[0], x0, y0, sw, sh
         else:
@@ -140,8 +140,8 @@ class GameData:
             for w in self.units:
                 x0, y0 = w[0].position[0], w[0].position[1]
                 sw, sh = w[0].w, w[0].h
-                for my in range(y0, y0+sh):
-                    for mx in range(x0, x0+sw):
+                for my in xrange(y0, y0+sh):
+                    for mx in xrange(x0, x0+sw):
                         if (mx, my) == (x, y):
                             if allegiance == w[0].allegiance:
                                 self.selection = [w[0], x0, y0, sw, sh]
@@ -154,15 +154,16 @@ class GameData:
         selection = set([])
         x0, y0 = self.conv(m0, n0)
         x1, y1 = self.conv(m1, n1)
-        for x in range(x0, x1+1):
-            for y in range(y0, y1+1):
+        for x in xrange(x0, x1+1):
+            for y in xrange(y0, y1+1):
                 if not self.is_place_empty(x, y):
                     anything_present = True
                     points_of_interest.append((x, y))
         if anything_present:
+            print self.units
             for x, y in points_of_interest:
                 for w in self.units:
-                    if (w[1], w[2]) == (x, y):
+                    if (w[0].position[0], w[0].position[1]) == (x, y):
                         x0, y0 = w[0].position[0], w[0].position[1]
                         # x1, y1 = w[0].w + w[0].x, w[0].h + w[0].y
                         if allegiance == w[0].allegiance:
