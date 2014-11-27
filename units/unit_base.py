@@ -15,7 +15,7 @@ class unit_non_attacking:
     def __init__(self, allegiance, x, y):
         # data about itself
         self.allegiance = allegiance
-        self.position = x, y
+        self.position = [x, y]
         self.image_file = "units/" + self.image_file
 
         # image data
@@ -193,8 +193,9 @@ class unit_attacking:
             if self.move_path:
                 if self.move_progress >= self.speed:
                     self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
-                    self.position[0] += self.cur_direction[0]
-                    self.position[1] += self.cur_direction[1]
+                    # self.position[0] += self.cur_direction[0]
+                    # self.position[1] += self.cur_direction[1]
+                    self.position = self.position[0] + self.cur_direction[0], self.position[1] + self.cur_direction[1]
                     self.move_progress = 0
                     self.dx, self.dy = 0, 0
                     self.cur_direction = self.move_path.pop(0)

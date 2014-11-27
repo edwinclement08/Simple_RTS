@@ -186,7 +186,7 @@ class Interface:
         above_the_bottom = self.mouse_pos[1] <= self.parent.map.y1
         mouse_inside_the_play_space = right_of_the_left_end and left_of_the_right_end and below_the_top \
             and above_the_bottom
-        self.c = [0, 0]
+        self.c = list(pygame.mouse.get_pos())
         if not mouse_inside_the_play_space:
             if not above_the_bottom:
                 self.c[1] = self.parent.map.y1-5
@@ -197,8 +197,11 @@ class Interface:
             if not left_of_the_right_end:
                 self.c[0] = self.parent.map.x1-1
         if self.dragging == 1:
+            print self.drag_start
             if self.parent.map.x0 <= self.drag_st_x <= self.parent.map.x1 and \
                     self.parent.map.y0 <= self.drag_st_y <= self.parent.map.y1:
+                print self.drag_st_x, self.drag_st_y, self.c[0]-self.drag_st_x, self.c[1]-self.drag_st_y
+
                 pygame.draw.rect(self.screen, (100, 255, 255), (self.drag_st_x, self.drag_st_y,
                                                                 self.c[0]-self.drag_st_x, self.c[1]-self.drag_st_y), 1)
                 x0, y0 = self.conv(self.drag_st_x, self.drag_st_y)
@@ -263,7 +266,7 @@ class Interface:
                 text = self.medium2_font.render(self.parent.game_data.get_unit(hx, hy)[0].name, 1, (30, 30, 30),
                                                 (128, 160, 192))
 
-                print self.parent.game_data.get_unit(hx, hy)
+                # print self.parent.game_data.get_unit(hx, hy)
                 self.screen.blit(text, (nx-40, ny))
 
         # for selection options
@@ -396,7 +399,7 @@ class Interface:
                         self.parent.map.y0 <= event.pos[1] <= self.parent.map.y1 and \
                         event.button == 3:                     # same as above ,right click.
                     if self.selected_unit:
-                        print self.parent.pathfinder.get_path((20, 9), (22, 12))
+                        # print self.parent.pathfinder.get_path((20, 9), (22, 12))
                         self.selected_unit.right_click_handle(*self.conv(event.pos[0], event.pos[1]))
                         pass
                     elif self.multiple_selected:

@@ -26,7 +26,7 @@ class Main():
         self.screen.fill((255, 255, 255))
         self.screen.set_colorkey((255, 255, 255))
 
-        self.true_screen = pygame.display.set_mode(self.screen_dim)          # ,FULLSCREEN)
+        self.true_screen = pygame.display.set_mode(self.screen_dim) # , FULLSCREEN)
 
         self.computer = player(self)
         self.human = player(self)

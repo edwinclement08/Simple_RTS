@@ -120,9 +120,9 @@ class GameData:
             return 0
 
     def get_unit(self, x, y):
-        print x, y,
+        # print x, y,
         if not self.is_place_empty(x, y):
-            print "gotcha"
+            # print "gotcha"
             for w in self.units:
                 x0, y0 = w[0].position[0], w[0].position[1]
                 sw, sh = w[0].w, w[0].h
@@ -131,7 +131,8 @@ class GameData:
                         if (mx, my) == (x, y):
                             return w[0], x0, y0, sw, sh
         else:
-            print "man"
+            # print "man"
+            pass
         return None
 
     def select_unit(self, x, y, allegiance):
@@ -162,7 +163,7 @@ class GameData:
             for x, y in points_of_interest:
                 for w in self.units:
                     if (w[1], w[2]) == (x, y):
-                        x0, y0 = w[0].x, w[0].y
+                        x0, y0 = w[0].position[0], w[0].position[1]
                         # x1, y1 = w[0].w + w[0].x, w[0].h + w[0].y
                         if allegiance == w[0].allegiance:
                             selection.add((w[0], x0, y0, w[0].w, w[0].h))
