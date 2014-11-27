@@ -3,7 +3,7 @@ import pygame
 from pygame.locals import *
 
 pygame.init()
-screen = pygame.display.set_mode((800,600))
+screen = pygame.display.set_mode((800, 600))
 
 
 class unit_non_attacking:
@@ -29,10 +29,10 @@ class unit_non_attacking:
         self.image_idle = []
         self.no_of_frames = len(px_image)/(self.w*20)
         for t in range(self.no_of_frames):
-            self.image_idle.append(px_image[t*(self.w*20):t*(self.w*20)+(self.h*20)-1,0:(self.h*20)-1].make_surface())
-        self.image_destroyed = px_image[0:self.w*20,self.h*20:(self.h*20)*2-1].make_surface()
+            self.image_idle.append(px_image[t*(self.w*20):t*(self.w*20)+(self.h*20)-1, 0:(self.h*20)-1].make_surface())
+        self.image_destroyed = px_image[0:self.w*20, self.h*20:(self.h*20)*2-1].make_surface()
 
-        self.selection_image = pygame.transform.scale(px_image[0:self.w*20,0:(self.h*20)-1].make_surface(),(40,40))
+        self.selection_image = pygame.transform.scale(px_image[0:self.w*20, 0:(self.h*20)-1].make_surface(), (40, 40))
 
         # used for blitting
         self.display_image = pygame.Surface((self.w*20-1, self.h*20-1))
@@ -191,7 +191,7 @@ class unit_attacking:
         self.display_image = self.images[self.cur_direction]
         if self.moving:
             if self.move_path:
-                if self.move_progress >= 100:
+                if self.move_progress >= self.speed:
                     self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
                     self.position[0] += self.cur_direction[0]
                     self.position[1] += self.cur_direction[1]
@@ -201,15 +201,14 @@ class unit_attacking:
                     self.time_since_last_inc = pygame.time.get_ticks()
                 else:
                     if pygame.time.get_ticks() - self.time_since_last_inc >= self.speed:
-                        move_per_20 = self.move_progress/100.0*(20.0)
-
+                        move_per_20 = (self.move_progress/self.speed)*20.0
                         self.dx, self.dy = self.cur_direction[0]*move_per_20, self.cur_direction[1]*move_per_20
 
                         if self.cur_direction[0] == 0:
                             self.dx = 0
                         if self.cur_direction[1] == 0:
                             self.dy = 0
-                        self.move_progress += 1
+                        self.move_progress += 1.0
                         self.time_since_last_inc = pygame.time.get_ticks()
             else:
                 self.moving = False
@@ -242,7 +241,7 @@ class unit_attacking:
         pass
 
     def right_click_handle(self, x, y):
-        print x, y
+        #print x, y, 'gsege'
         if self.allegiance.parent.game_data.places_truly_empty[y][x]:
             print "Moving"
             self.move(x, y)
@@ -274,7 +273,7 @@ class Copter(unit_attacking):
 
     range = 10
     time_for_reload = 700
-    speed = 1
+    speed = 14
 
     image_file = "Copter.bmp"
 
@@ -288,7 +287,7 @@ class Paladin(unit_attacking):
 
     range = 10
     time_for_reload = 1000
-    speed = 1
+    speed = 4
 
     image_file = "Paladin.bmp"
 
@@ -471,7 +470,7 @@ class command_center(unit_non_attacking):
                 self.task_doing_name = sel_option
                 self.time_task_started = None
                 self.task_done = 0
-                self.total_time_for_task = self.task_list[sel_option] [1]
+                self.total_time_for_task = self.task_list[sel_option][1]
                 self.task_args = [self.allegiance]
                 self.positioning = True
 
@@ -484,7 +483,3 @@ class command_center(unit_non_attacking):
 
     def any_other_stuff(self):
         pass
-
-
-
-

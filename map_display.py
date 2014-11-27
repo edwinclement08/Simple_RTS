@@ -57,17 +57,17 @@ class Map:
 
     def update(self):
         y0 = 0
-        for y in range(self.cur_pos[1],self.cur_pos[1]+self.window_h):
+        for y in range(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
-            for x in range(self.cur_pos[0],self.cur_pos[0]+self.window_w):
+            for x in range(self.cur_pos[0], self.cur_pos[0]+self.window_w):
                 self.screen.blit(self.image_dict[self.main_layer[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
                 x0 += 1
             y0+=1
 
         y0 = 0
-        for y in range(self.cur_pos[1],self.cur_pos[1]+self.window_h):
+        for y in range(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
-            for x in range(self.cur_pos[0],self.cur_pos[0]+self.window_w):
+            for x in range(self.cur_pos[0], self.cur_pos[0]+self.window_w):
                 self.screen.blit(self.image_dict[self.overlay[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
                 x0 += 1
             y0 += 1

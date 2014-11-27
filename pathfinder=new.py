@@ -13,9 +13,11 @@ class Star(object):
 
     def find_path(self, start, end):
         self.start, self.end = start, end
-        # self.map = self.parent.game_data.places_occupied
+        # self.map = self.parent.7game_data.places_occupied
         self.map = [[0]*10 for t in range(10)]
+
         self.setup()
+
         return self.evaluate()
 
     def setup(self):
@@ -27,6 +29,7 @@ class Star(object):
         self.hx = {}  # Optimal estimate to goal based on heuristic.
         self.fx = {}  # Distance-plus-cost heuristic function.
         self.current = self.start
+
         self.current = self.follow_current_path()
         self.solution = []
         self.solved = False
@@ -73,6 +76,8 @@ class Star(object):
         """Core logic for executing the A* algorithm."""
         if self.open_set and not self.solved:
             print "op but nmot"
+            print self.current
+            print self.open_set
             for cell in self.open_set:
                 print 'gse'
                 if (self.current not in self.open_set) or (self.fx[cell] < self.fx[self.current]):
@@ -91,4 +96,4 @@ class Star(object):
 
 
 c = Star("Friar")
-print c.find_path((2, 2), (7, 7))
+print c.find_path((2, 2), (7, 7)), "efw"
