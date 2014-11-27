@@ -2,179 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae14d48d-2ffe-4264-a17e-9c1639b5a9c2" name="New changelist" comment="27/11 &#10;12.14 pm">
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Box.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Master.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Minibox.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\Title_bar.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\draw_entire_map.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\gray_out_area.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Arrangement-backup.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Arrangement.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Crater.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Crtr2Wtr.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Game(old).json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\GrasClif.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\GrasRoad.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Grass2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Grs2CrtB.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master-backup.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master-backup2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Master.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\Mines.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\TreeGrs.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\attack1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\attack2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\harvest.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\harvest2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\move1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\move2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\pandown.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panleft.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panright.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\panup.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\cursors\select.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\dsffsdctemp.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\gold-cutout.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\gold.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\interface.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\json-ifier.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\make into matrix.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\map.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tile_data.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tree1.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\tree2.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial2.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial_json.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\trial_loadimage.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-backup,done\v.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Artillery_turret.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Generator.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Factory3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Field.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Silo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Televatr.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\Televtr2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\Unreq\TradPlat.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\artillery_shop.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\command_center.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\helipad.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\machine_turret.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Buildings\resource_center.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullet.1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullet2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Bullets.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Cursor1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Flag.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Flame.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Marker.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Outline.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Outline2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\Selected.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\expSmall.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\exploBig.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\Misc\explosn.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Artil.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Artil3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Balloon1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Boat2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Boat3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Builder5.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Copter.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Copter2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Miner.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Scout1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Scout2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank10.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank11.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank12.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank13.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank14.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank15.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank16.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank5.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank6.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank7.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank8.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Tank9.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\images-units\vehicles\Transprt.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\interface.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\main.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map (2).json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map_display (2).py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\map_display.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\pathfinder.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\pathfinder_2.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\Backup\terrain.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\get_neighbour_testing.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\old_pf.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\pathfinder=new.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\pathfinding.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\ArtlFlsh.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Blood1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullet.1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullet2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Bullets.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cloud3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Cursor1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Dark.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Electric.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Embossed.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Face1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Flag.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Flame.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Font.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Icons.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Junk.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Marker.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Mines.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Muzzle.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Objects.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Outline.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Outline2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Selected.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Sparks.anim" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Teleport.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Teleprt2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\Test4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\expSmall.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\exploBig.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\Misc\explosn.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\bullet.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\rsrssbvrs.py.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Balloon1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Boat2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2a.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Copter2b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\Tank16.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Copter.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_3.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\reqimgaes\vehicles\selected\Tank_4.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\temp.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\comp\Project python 2014 RTS\Project-python-2014-RTS\RTS\temp_units.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface.py" afterPath="$PROJECT_DIR$/interface.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project python 2014 RTS.iws" />
@@ -234,7 +61,7 @@
       <file leaf-file-name="interface.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.631068" vertical-offset="7196" max-vertical-offset="10857">
+            <state vertical-scroll-proportion="-3.636111" vertical-offset="7196" max-vertical-offset="10857">
               <caret line="220" column="48" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
               <folding />
             </state>
@@ -719,7 +546,11 @@
       <created>1417113901538</created>
       <updated>1417113901538</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="27/11 &#10;12.14 pm">
+      <created>1417115315363</created>
+      <updated>1417115315363</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -747,6 +578,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4541387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46031746" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.49962825" order="10" side_tool="false" content_ui="tabs" />
@@ -755,13 +587,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38882682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991555" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2785235" sideWeight="0.40591073" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1631285" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16331096" sideWeight="0.59408927" order="2" side_tool="false" content_ui="tabs" x="336" y="298" width="1007" height="413" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.72930646" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40223464" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1083,7 +914,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.631068" vertical-offset="7196" max-vertical-offset="10857">
+        <state vertical-scroll-proportion="-3.636111" vertical-offset="7196" max-vertical-offset="10857">
           <caret line="220" column="48" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
           <folding />
         </state>
