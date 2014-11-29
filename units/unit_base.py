@@ -110,10 +110,10 @@ class unit_non_attacking:
                 all_cover.add((s[0]+q[0], s[1]+q[1]))
         actual_neighbours = all_cover - occupied
         actual_neighbours_free = []
-        smap = self.allegiance.parent.game_data.places_truly_empty
+        s_map = self.allegiance.parent.game_data.places_truly_empty
 
         for (tx, ty) in actual_neighbours:
-            if smap[ty][tx] == 1:
+            if s_map[ty][tx] == 1:
                 actual_neighbours_free.append((tx,  ty))
 
         return actual_neighbours_free
@@ -127,7 +127,7 @@ class unit_non_attacking:
     def any_other_stuff(self):
         pass
 
-    def right_click_handle(self):
+    def right_click_handle(self, kx, ky):
         pass
 
 
@@ -248,8 +248,8 @@ class unit_attacking:
             self.move(x, y)
         else:
             click = self.allegiance.parent.game_data.get_unit(x, y)
-            print click
-            print click[0].allegiance
+            if click[0]:   # and issubclass():
+                print click[0].allegiance
         pass
 
 
@@ -260,7 +260,7 @@ class Hovercraft(unit_attacking):
 
     range = 5
     time_for_reload = 700
-    speed = 10
+    speed = 12
 
     image_file = "Hovercraft.bmp"
 
@@ -274,7 +274,7 @@ class Copter(unit_attacking):
 
     range = 10
     time_for_reload = 700
-    speed = 14
+    speed = 10
 
     image_file = "Copter.bmp"
 
@@ -288,7 +288,7 @@ class Paladin(unit_attacking):
 
     range = 10
     time_for_reload = 1000
-    speed = 4
+    speed = 18
 
     image_file = "Paladin.bmp"
 
@@ -302,21 +302,21 @@ class Mobile_Missile(unit_attacking):
 
     range = 5
     time_for_reload = 1000
-    speed = 1
+    speed = 25
 
     image_file = "Mobile_Missile.bmp"
 
     w, h = 1, 1
 
 
-class Gattling_Gun(unit_attacking):
+class Gatling_Gun(unit_attacking):
     name = "Gattling Gun"
     cost = 400
     total_health = 500
 
     range = 8
     time_for_reload = 1000
-    speed = 1
+    speed = 20
 
     image_file = "Gattling_Gun.bmp"
 
@@ -361,8 +361,47 @@ class artillery_shop(unit_non_attacking):
 
     # implement low power shutdown # for checking ## self.allegiance.low_power
 
-    selection_options = {
-    }
+    selection_options = {'Gatling Gun': Gatling_Gun("", -1, -1).selection_image,
+                         'Mobile_Missile': Mobile_Missile("", -1, -1).selection_image,
+                         'Paladin': Paladin("", -1, -1).selection_image,
+                         'Hovercraft': Hovercraft("", -1, -1).selection_image
+                         }
+
+    def __init__(self, allegiance, x, y):
+        unit_non_attacking.__init__(self, allegiance, x, y)
+        self.task_list = {
+            'Gatling Gun': (Gatling_Gun, 1000),
+            'Mobile_Missile': (Mobile_Missile, 1000),
+            'Paladin': (Paladin, 1000),
+            'Hovercraft': (Hovercraft, 1000)
+        }
+
+    def do_task(self):
+        free_neighbour = self.get_free_neighbour()[0]
+        if free_neighbour:
+            u = self.task_list[self.task_doing_name][0](self.allegiance, free_neighbour[0], free_neighbour[1])
+
+            self.allegiance.units.append(u)
+            self.allegiance.parent.game_data.place_unit(u)
+        else:
+            self.allegiance.parent.message.put_message("No free Area around")
+
+    def do_selection(self, sel_option):
+        if self.idle:
+            if self.allegiance.money - self.task_list[sel_option][0].cost >= 0:
+                self.allegiance.money -= self.task_list[sel_option][0].cost
+                self.idle = False
+                self.wait = False
+                self.task_doing_name = sel_option
+                self.time_task_started = pygame.time.get_ticks()
+                self.task_done = 0
+                if not self.allegiance.low_power:
+                    self.total_time_for_task = self.task_list[sel_option][1]
+                else:
+                    self.total_time_for_task = self.task_list[sel_option][1]*1.1
+                self.task_args = [self.allegiance]
+            else:
+                self.allegiance.parent.message.put_message("Not enough money")
 
 
 class helipad(unit_non_attacking):
@@ -392,7 +431,7 @@ class helipad(unit_non_attacking):
             self.allegiance.units.append(u)
             self.allegiance.parent.game_data.place_unit(u)
         else:
-            self.allegiance.parent.message.put_message("No free Area around the Helipad")
+            self.allegiance.parent.message.put_message("No free Area around")
 
     def do_selection(self, sel_option):
         if self.idle:
