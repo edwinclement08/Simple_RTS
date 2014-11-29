@@ -183,6 +183,7 @@ class unit_attacking:
 
         self.fx, self.fy = 0, 0
         self.health = self.total_health
+        self.last_move = False
 
         self.update()
 
@@ -190,15 +191,19 @@ class unit_attacking:
         self.any_other_stuff()
         self.display_image = self.images[self.cur_direction]
         if self.moving:
-            if self.move_path:
+            if self.move_path or self.last_move:
                 if self.move_progress >= self.speed:
+                    print self.cur_direction
                     self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
-                    # self.position[0] += self.cur_direction[0]
-                    # self.position[1] += self.cur_direction[1]
                     self.position = self.position[0] + self.cur_direction[0], self.position[1] + self.cur_direction[1]
                     self.move_progress = 0
                     self.dx, self.dy = 0, 0
-                    self.cur_direction = self.move_path.pop(0)
+                    if not self.last_move:
+                        self.cur_direction = self.move_path.pop(0)
+                        if len(self.move_path) == 0:
+                            self.last_move = True
+                    else:
+                        self.last_move = False
                     self.time_since_last_inc = pygame.time.get_ticks()
                 else:
                     if pygame.time.get_ticks() - self.time_since_last_inc >= self.speed:
@@ -213,14 +218,16 @@ class unit_attacking:
                         self.time_since_last_inc = pygame.time.get_ticks()
             else:
                 self.moving = False
+                self.allegiance.parent.game_data.remove_mark(self.position)
                 self.move_path = []
                 self.move_progress = 0  # in percent
                 self.time_since_last_inc = pygame.time.get_ticks()
 
     def move(self, tx, ty):
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
-        print self.move_path
+
         if self.move_path:
+            self.allegiance.parent.game_data.set_as_marked((tx, ty))
             self.moving = True
             self.move_progress = 0  # in percent
             self.cur_direction = self.move_path.pop(0)
@@ -244,11 +251,10 @@ class unit_attacking:
     def right_click_handle(self, x, y):
         #print x, y, 'gsege'
         if self.allegiance.parent.game_data.places_truly_empty[y][x]:
-            print "Moving"
             self.move(x, y)
         else:
             click = self.allegiance.parent.game_data.get_unit(x, y)
-            if click[0]:   # and issubclass():
+            if click:   # and issubclass():
                 print click[0].allegiance
         pass
 

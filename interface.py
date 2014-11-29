@@ -140,7 +140,8 @@ class Interface:
         x = (self.mouse_pos[0]-self.parent.map.x_offset)/20+self.parent.map.cur_pos[0]
         y = (self.mouse_pos[1]-self.parent.map.y_offset)/20+self.parent.map.cur_pos[1]
 
-        if not self.parent.game_data.is_place_empty(x, y) and (self.selected_unit or self.multiple_selected) and \
+        if (not self.parent.game_data.is_place_empty(x, y)) and (self.selected_unit or self.multiple_selected) and \
+                self.parent.game_data.get_unit(x, y) and \
                 self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.computer:
             one_attacking_unit = self.selected_unit\
                 and isinstance(self.selected_unit, self.parent.unit_base.unit_attacking)

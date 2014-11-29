@@ -47,6 +47,7 @@ class GameData:
         self.units = []
         self.places_occupied = [[0]*100 for d in range(100)]
         self.places_truly_empty = [[0]*100 for d in range(100)]
+        self.marked_place = set()
         self.parent = parent
 
         self.screen = pygame.Surface((self.parent.map.window_w*20, self.parent.map.window_h*20)).convert()
@@ -70,8 +71,8 @@ class GameData:
             m[0].update()
             self.screen.blit(m[0].display_image, (x, y))
 
-        for y in range(100):
-            for x in range(100):
+        for y in xrange(100):
+            for x in xrange(100):
                 self.places_truly_empty[y][x] = self.is_place_truly_empty(x, y)
 
     def place_unit(self, unit):
@@ -81,40 +82,39 @@ class GameData:
                 self.units.append([unit, x, y])
                 unit.position = x, y
                 sw, sh = unit.w, unit.h
-                for my in range(sh):
-                    for mx in range(sw):
+                for my in xrange(sh):
+                    for mx in xrange(sw):
                         self.places_occupied[y+my][x+mx] = 1
 
     def move_unit(self, unit, (x, y), direction):
         w, h = unit.w, unit.h
         dx, dy = x + direction[0], y + direction[1]
 
-        for ly in range(y, y+h):
-            for lx in range(x, x+w):
+        for ly in xrange(y, y+h):
+            for lx in xrange(x, x+w):
                 self.places_occupied[ly][lx] = 0
 
-        for ly in range(dy, dy+h):
-            for lx in range(dx, dx+w):
+        for ly in xrange(dy, dy+h):
+            for lx in xrange(dx, dx+w):
                 self.places_occupied[ly][lx] = 1
 
-        # array = unit.allegiance.units
-        # print array
-        #for e in array:
-        #    try:
-        #        if e[0] == unit:
-        #            e[1], e[2] = dx, dy
-        #    except AttributeError:
-        #        print "error"
-        #        print e
+    def set_as_marked(self, (x, y)):
+        if self.is_place_truly_empty(x, y):
+            self.marked_place.add((x, y))
+
+    def remove_mark(self, (x, y)):
+        if (x, y) in self.marked_place:
+            self.marked_place.remove((x, y))
 
     def is_place_empty(self, x, y):
-        if not self.places_occupied[y][x]:
+        if not self.places_occupied[y][x] and not((x, y) in self.marked_place):
             return True
         else:
             return False
 
     def is_place_truly_empty(self, x, y):
-        if not self.places_occupied[y][x] and self.parent.map.is_cell_movable(x, y):
+        if not self.places_occupied[y][x] and self.parent.map.is_cell_movable(x, y)\
+                and not((x, y) in self.marked_place):
             return 1
         else:
             return 0
@@ -176,7 +176,7 @@ class GameData:
         self.units.remove(unit)
         sw, sh = unit.w, unit.h
         x, y = unit.x, unit.y
-        for my in range(sh):
-            for mx in range(sw):
+        for my in xrange(sh):
+            for mx in xrange(sw):
                 self.places_occupied[y+my][x+mx] = 0
         del unit
