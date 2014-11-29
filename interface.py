@@ -123,7 +123,7 @@ class Interface:
         # Cursor
         self.cursor_images = {}
         for w in self.cursor_files:
-            self.cursor_images[w] = pygame.image.load(self.cursor_files[w]).convert()
+            self.cursor_images[w] = pygame.image.load(self.cursor_files[w]).convert_alpha()
         self.current_cursor = self.cursor_images["default"]
         pygame.mouse.set_visible(False)
         x, y = self.parent.map.x0, self.parent.map.y0
@@ -136,6 +136,42 @@ class Interface:
         self.update()
 
     def update(self):
+        # Mouse Cursor Setting
+        x = (self.mouse_pos[0]-self.parent.map.x_offset)/20+self.parent.map.cur_pos[0]
+        y = (self.mouse_pos[1]-self.parent.map.y_offset)/20+self.parent.map.cur_pos[1]
+
+        if not self.parent.game_data.is_place_empty(x, y) and (self.selected_unit or self.multiple_selected) and \
+                self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.computer:
+            one_attacking_unit = self.selected_unit\
+                and isinstance(self.selected_unit, self.parent.unit_base.unit_attacking)
+            self.multi_attacking_units = False
+            if not self.multiple_selected:
+                self.multi_attacking_units = False
+            else:
+                for k in self.multiple_selected:
+                    if isinstance(k, self.parent.unit_base.unit_attacking):
+                        self.multi_attacking_units = True
+                        break
+                else:
+                    self.multi_attacking_units = False
+            if one_attacking_unit or self.multi_attacking_units:
+                self.current_cursor = self.cursor_images["attack"]
+        elif (self.selected_unit or self.multiple_selected) \
+                and self.parent.map.is_cell_free(x, y) and self.parent.game_data.is_place_empty(x, y):
+            if self.selected_unit and issubclass(self.selected_unit.__class__, unit_base.unit_attacking):
+                self.current_cursor = self.cursor_images["move"]
+            elif self.multiple_selected:
+                for q in self.multiple_selected:
+                    if issubclass(q.__class__, unit_base.unit_attacking):
+                        self.current_cursor = self.cursor_images["move"]
+            else:
+                    self.current_cursor = self.cursor_images["normal"]
+        elif self.parent.game_data.get_unit(x, y) and \
+                self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.human:
+            self.current_cursor = self.cursor_images["select"]
+        else:
+            self.current_cursor = self.cursor_images["normal"]
+
         # the borders
         self.screen.fill((255, 255, 255))
         self.screen.blit(self.image_dict["border.left"], (0, 20))
@@ -439,7 +475,6 @@ class Interface:
                         self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
                         # print self.image_for_selection
                         self.selected_options = None
-
             elif event.type == MOUSEMOTION:
                 self.mouse_pos = pygame.mouse.get_pos()
                 self.time_last_moved = pygame.time.get_ticks()
@@ -448,34 +483,6 @@ class Interface:
                         self.drag_start = self.drag_st_x, self.drag_st_y = (event.pos[0]+event.rel[0],
                                                                             event.pos[1]+event.rel[1])
                         self.dragging = 1
-                elif event.buttons == (0, 0, 0) and not (self.selected_unit or self.multiple_selected):
-                    x = (self.mouse_pos[0]-self.parent.map.x_offset)/20+self.parent.map.cur_pos[0]
-                    y = (self.mouse_pos[1]-self.parent.map.y_offset)/20+self.parent.map.cur_pos[1]
-                    if self.parent.map.is_cell_free(x, y) and self.parent.game_data.is_place_empty(x, y):
-                        if self.selected_unit or self.multiple_selected:
-                            self.current_cursor = self.cursor_images["move"]
-                        else:
-                            self.current_cursor = self.cursor_images["normal"]
-                    elif not self.parent.game_data.is_place_empty(x, y):
-                        if self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.computer:
-                            one_attacking_unit = self.selected_unit\
-                                and isinstance(self.selected_unit, self.parent.unit_base.unit_attacking)
-                            self.multi_attacking_units = False
-                            if not self.multiple_selected:
-                                self.multi_attacking_units = False
-                            else:
-                                for k in self.multiple_selected:
-                                    if isinstance(k, self.parent.unit_base.unit_attacking):
-                                        self.multi_attacking_units = True
-                                        break
-                                else:
-                                    self.multi_attacking_units = False
-                            if one_attacking_unit or self.multi_attacking_units:
-                                self.current_cursor = self.cursor_images["attack"]
-                        elif self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.human:
-                            self.current_cursor = self.cursor_images["select"]
-                    else:
-                        self.current_cursor = self.cursor_images["normal"]
 
     def map_panning_mouse(self):
         if (pygame.time.get_ticks() - self.time_last_map_moved) > 70:
