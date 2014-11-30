@@ -4,7 +4,8 @@ lis = ["find_path.py",
        "main.py",
        "map_display.py",
        "message_box.py",
-       "units\\unit_base.py"]
+       "units\\unit_base.py",
+       "units\\ammunition.py"]
 lines = 0
 for e in lis:
     lines += len(open(e).readlines())
