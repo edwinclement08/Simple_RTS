@@ -73,7 +73,7 @@ class Message:
     def update(self):
         if self.working:
             if pygame.time.get_ticks() - self.time_started >= self.time:
-                self.screen.fill((0,0,0))
+                self.screen.fill((0, 0, 0))
                 self.working = False
                 self.time = 2000
                 self.time_started = None

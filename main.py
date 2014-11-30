@@ -10,7 +10,8 @@ sys.path[0:0] = ("units",)
 from unit_base import *
 from message_box import *
 from find_path import *
-
+from ammunition import *
+import math
 
 class Main():
     screen_dim = w, h = 800, 480
@@ -26,7 +27,7 @@ class Main():
         self.screen.fill((255, 255, 255))
         self.screen.set_colorkey((255, 255, 255))
 
-        self.true_screen = pygame.display.set_mode(self.screen_dim)     # , FULLSCREEN)
+        self.true_screen = pygame.display.set_mode(self.screen_dim) # , FULLSCREEN)
 
         self.computer = player(self)
         self.human = player(self)
@@ -36,6 +37,7 @@ class Main():
         self.interface = Interface(self)
         self.message = Message(self.w, self.h)
         self.pathfinder = AStar(self)
+        self.firearms = firearms(self)
 
         self.game_data.place_unit(command_center(self.computer, 20, 20, self))
 
@@ -51,7 +53,10 @@ class Main():
         self.human.units.append(m)
         self.game_data.place_unit(m)
 
-        self.first_run = 1
+        # self.first_run = 1
+
+        q = ammunition((2, 2), math.radians(0), 'bullet')
+        self.firearms.add(q)
 
         self.mainloop()
 
@@ -65,6 +70,9 @@ class Main():
             self.map.update()
             self.game_data.update()
             self.message.update()
+            # qq = pygame.time.get_ticks()
+            self.firearms.update()
+            # print pygame.time.get_ticks() - qq
 
             self.computer.update()
             self.human.update()
@@ -73,6 +81,7 @@ class Main():
             self.screen.blit(self.game_data.screen, (0, 0))
             self.screen.blit(self.interface.screen, (0, 0))
             self.screen.blit(self.message.screen, (0, 0))
+            self.screen.blit(self.firearms.screen, (0, 0))
 
             self.true_screen.blit(self.screen, (0, 0))
             pygame.display.update()
