@@ -9,7 +9,7 @@ class ammunition:
     distance_traveled = 0
 
     def __init__(self, (x, y), angle, ammunition_type):
-        self.start_position = (x, y)
+        self.start_position = (x, y+1)
         self.angle = angle
         self.type = ammunition_type
         self.time_fired = pygame.time.get_ticks()
@@ -21,10 +21,10 @@ class firearms:
                  'ecm': 0.05,
                  'missile': 0.03,
                  'flame thrower': 0.02}
-    get_range = {'bullet': 100,
-                 'ecm': 500,
-                 'missile': 300,
-                 'flame thrower': 200}
+    get_range = {'bullet': 10,
+                 'ecm': 10,
+                 'missile': 20,
+                 'flame thrower': 5}
 
     def __init__(self, parent):
         self.parent = parent
@@ -56,7 +56,8 @@ class firearms:
     def add(self, firearm):
         if isinstance(firearm, ammunition):
             self.ammunition_list.append(firearm)
-            firearm.image = pygame.transform.rotate(self.bullet_images[firearm.type], firearm.angle)
+            firearm.image = pygame.transform.rotate(self.bullet_images[firearm.type], math.degrees(firearm.angle)) #  firearm.angle)
+            # firearm.image = self.bullet_images[firearm.type]
             return True
         else:
             return None
@@ -65,7 +66,7 @@ class firearms:
         cr = 0
         al = self.ammunition_list
         while cr < len(self.ammunition_list):
-            al[cr].distance_traveled = (pygame.time.get_ticks()- al[cr].time_fired) * self.get_speed[al[cr].type]
+            al[cr].distance_traveled = (pygame.time.get_ticks() - al[cr].time_fired) * self.get_speed[al[cr].type]
             if al[cr].distance_traveled > self.get_range[al[cr].type]:
                 al.remove(al[cr])
                 cr -= 1
@@ -76,26 +77,26 @@ class firearms:
             for rt in self.dirty_rect:
                 pygame.draw.rect(self.screen, (0, 0, 0), rt, 0)
 
-        # self.screen.fill((0, 0, 0))
-
         self.remove_out_of_range()
 
         cp_x, cp_y = self.parent.map.cur_pos
-        self.x0, self.y0, self.x1, self.y1 = cp_x, cp_y, cp_x + self.screen_width, cp_y + self.screen_height
+        self.x0, self.y0, self.x1, self.y1 = cp_x, cp_y, cp_x + self.screen_width, cp_y + self.screen_height+3
+        # print self.x0, self.y0, self.x1, self.y1,
 
         self.dirty_rect = []
         for t in self.ammunition_list:
             x, y = t.start_position
-            u_dx, u_dy = t.distance_traveled * math.cos(t.angle), t.distance_traveled * math.sin(t.angle)
+            u_dx, u_dy = t.distance_traveled * math.cos(t.angle), t.distance_traveled * -math.sin(t.angle)
             dx, dy = math.floor(u_dx), math.floor(u_dy)
 
             fx, fy = x + dx, y + dy
+            # print fx, fy
             if self.x0 < fx < self.x1 and self.y0 < fy < self.y1:
+
                 rel_x = fx - self.x0
                 rel_y = fy - self.y0
 
-                blit_x = self.x_offset + rel_x*20 + (u_dx - dx)*20
-                blit_y = self.y_offset + rel_y*20 + (u_dy - dy)*20
+                blit_x = rel_x*20 + (u_dx - dx)*20
+                blit_y = rel_y*20 + (u_dy - dy)*20
                 self.dirty_rect.append(pygame.Rect(blit_x, blit_y, 10, 10))
                 self.screen.blit(t.image, (blit_x, blit_y))
-

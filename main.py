@@ -55,7 +55,7 @@ class Main():
 
         # self.first_run = 1
 
-        q = ammunition((2, 2), math.radians(0), 'bullet')
+        q = ammunition((7, 7), math.radians(-60), 'bullet')
         self.firearms.add(q)
 
         self.mainloop()
