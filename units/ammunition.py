@@ -5,7 +5,10 @@ import math
 
 class ammunition:
     speed = 0
-    point_to_decrease = 0
+    point_to_decrease = {'bullet': 10,
+                         'ecm': 20,
+                         'missile': 13,
+                         'flame thrower': 40}
     distance_traveled = 0
 
     def __init__(self, (x, y), angle, ammunition_type):
@@ -13,6 +16,8 @@ class ammunition:
         self.angle = angle
         self.type = ammunition_type
         self.time_fired = pygame.time.get_ticks()
+        self.red_points = self.point_to_decrease[ammunition_type]
+        self.has_hit = False
 
 
 class firearms:
@@ -67,7 +72,7 @@ class firearms:
         al = self.ammunition_list
         while cr < len(self.ammunition_list):
             al[cr].distance_traveled = (pygame.time.get_ticks() - al[cr].time_fired) * self.get_speed[al[cr].type]
-            if al[cr].distance_traveled > self.get_range[al[cr].type]:
+            if al[cr].distance_traveled > self.get_range[al[cr].type] or al[cr].has_hit:
                 al.remove(al[cr])
                 cr -= 1
             cr += 1
@@ -89,7 +94,7 @@ class firearms:
             u_dx, u_dy = t.distance_traveled * math.cos(t.angle), t.distance_traveled * -math.sin(t.angle)
             dx, dy = math.floor(u_dx), math.floor(u_dy)
 
-            fx, fy = x + dx, y + dy
+            fx, fy = int(x + dx), int(y + dy)
             # print fx, fy
             if self.x0 < fx < self.x1 and self.y0 < fy < self.y1:
 
@@ -100,3 +105,10 @@ class firearms:
                 blit_y = rel_y*20 + (u_dy - dy)*20
                 self.dirty_rect.append(pygame.Rect(blit_x-10, blit_y-10, 30, 30))
                 self.screen.blit(t.image, (blit_x, blit_y))
+
+            if self.parent.game_data.has_any_unit(fx, fy):
+                unit_data = self.parent.game_data.get_unit(fx, fy)[0]
+                unit_data.got_hit(t.red_points)
+                t.has_hit = True
+
+

@@ -122,6 +122,12 @@ class GameData:
         else:
             return False
 
+    def has_any_unit(self, rx, ry):
+        if self.places_occupied[ry][rx]:
+            return True
+        else:
+            return False
+
     def is_place_truly_empty(self, x, y):
         if not self.places_occupied[y][x] and self.parent.map.is_cell_movable(x, y)\
                 and not((x, y) in self.marked_place):
@@ -130,9 +136,7 @@ class GameData:
             return 0
 
     def get_unit(self, x, y):
-        # print x, y,
         if not self.is_place_empty(x, y):
-            # print "gotcha"
             for w in self.units:
                 x0, y0 = w[0].position[0], w[0].position[1]
                 sw, sh = w[0].w, w[0].h
@@ -140,9 +144,6 @@ class GameData:
                     for mx in xrange(x0, x0+sw):
                         if (mx, my) == (x, y):
                             return w[0], x0, y0, sw, sh
-        else:
-            # print "man"
-            pass
         return None
 
     def select_unit(self, x, y, allegiance):
@@ -183,7 +184,7 @@ class GameData:
         return None
 
     def delete_unit(self, unit):
-        print unit, self.units
+        # print unit, self.units
         self.units.remove([unit, unit.position[0], unit.position[1]])
         sw, sh = unit.w, unit.h
         x, y = unit.position[0], unit.position[1]

@@ -53,9 +53,8 @@ class Main():
         self.human.units.append(m)
         self.game_data.place_unit(m)
 
-        # self.first_run = 1
 
-        q = ammunition((7, 7), math.radians(-60), 'missile')
+        q = ammunition((7, 7), math.radians(-55), 'missile')
         qa = ammunition((8, 9), math.radians(-40), 'ecm')
         qs = ammunition((6, 3), math.radians(-12), 'flame thrower')
         qd = ammunition((10, 1), math.radians(-80), 'bullet')
