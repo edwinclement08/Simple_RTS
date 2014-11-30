@@ -37,9 +37,14 @@ class Main():
         self.message = Message(self.w, self.h)
         self.pathfinder = AStar(self)
 
+        self.game_data.place_unit(command_center(self.computer, 20, 20, self))
+
         self.game_data.place_unit(command_center(self.human, 10, 10, self))
 
         m = resource_center(self.human, 14, 14)
+        m.health = 12
+        m.got_hit(13)
+
         self.game_data.place_unit(m)
         self.human.units.append(m)
         m = helipad(self.human, 16, 16)

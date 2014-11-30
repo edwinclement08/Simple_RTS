@@ -144,7 +144,7 @@ class Interface:
                 self.parent.game_data.get_unit(x, y) and \
                 self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.computer:
             one_attacking_unit = self.selected_unit\
-                and isinstance(self.selected_unit, self.parent.unit_base.unit_attacking)
+                and isinstance(self.selected_unit, unit_base.unit_attacking)
             self.multi_attacking_units = False
             if not self.multiple_selected:
                 self.multi_attacking_units = False

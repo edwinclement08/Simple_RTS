@@ -10,7 +10,7 @@ import unit_base
 class player():
     def __init__(self, parent):
         self.parent = parent
-        self.money = 1000
+        self.money = 5000
         self.power = 1
         self.units = []
 
@@ -21,11 +21,20 @@ class player():
         self.power_update()
         self.check_for_enough_power()
 
+        g = 0
+        while g < len(self.units):
+            if self.units[g].destroyed and (pygame.time.get_ticks() - self.units[g].time_since_destroyed) > 3000:
+                a = self.units.pop(g)
+                self.parent.game_data.delete_unit(a)
+                del a
+            g += 1
+
     def power_update(self):
         p = 1
         for t in self.units:
             if isinstance(t, unit_base.generator):
-                p += 5  # power supplied by one generator
+                if not t.destroyed:
+                    p += 5  # power supplied by one generator
         self.power = p
 
     def check_for_enough_power(self):
@@ -33,7 +42,8 @@ class player():
         for t in self.units:
             if isinstance(t, unit_base.resource_center) or isinstance(t, unit_base.artillery_shop) or \
                     isinstance(t, unit_base.helipad):
-                req_power += t.power
+                if not t.destroyed:
+                    req_power += t.power
         self.req_power = req_power
         if self.power < self.req_power:
             self.low_power = True
@@ -173,10 +183,10 @@ class GameData:
         return None
 
     def delete_unit(self, unit):
-        self.units.remove(unit)
+        print unit, self.units
+        self.units.remove([unit, unit.position[0], unit.position[1]])
         sw, sh = unit.w, unit.h
-        x, y = unit.x, unit.y
+        x, y = unit.position[0], unit.position[1]
         for my in xrange(sh):
             for mx in xrange(sw):
                 self.places_occupied[y+my][x+mx] = 0
-        del unit

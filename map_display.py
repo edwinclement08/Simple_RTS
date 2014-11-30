@@ -4,44 +4,45 @@ import pygame
 import sys
 from pygame.locals import *
 
+
 class Map:
     image_file = 'Data\\terrain.bmp'
     data_file = 'Data\\map.json'
-    cur_pos = 0,0
-    window_w,window_h =30,23        # No. of tiles
-    x0, y0 = x_offset, y_offset = 19,45
+    cur_pos = 0, 0
+    window_w, window_h = 30, 23        # No. of tiles
+    x0, y0 = x_offset, y_offset = 19, 45
     x1, y1 = x_offset + (window_w-1)*20, y_offset + (window_h-2)*20
 
     def __init__(self):
         pygame.init()
-        self.screen = pygame.Surface((self.window_w*20,self.window_h*20)).convert()
-        self.screen.fill((255,255,255))
-        self.screen.set_colorkey((255,255,255))
+        self.screen = pygame.Surface((self.window_w*20, self.window_h*20)).convert()
+        self.screen.fill((255, 255, 255))
+        self.screen.set_colorkey((255, 255, 255))
 
         self.map = json.load(open(self.data_file))
         ml = self.map["main_layer"]
         ol = self.map["overlay"]
-        self.main_layer = [ml[a:a+100] for a in range(0,len(ml),100)]
-        self.overlay = [ol[a:a+100] for a in range(0,len(ol),100)]
+        self.main_layer = [ml[a:a+100] for a in range(0, len(ml), 100)]
+        self.overlay = [ol[a:a+100] for a in range(0, len(ol), 100)]
 
         self.image = pygame.image.load(self.image_file).convert()
         self.main_pixel_array = mpa = pygame.PixelArray(self.image)
 
         pic_data = self.map['tile_data']
-        self.image_dict={}
+        self.image_dict = {}
         for m in pic_data:
-            x,y = m[2]
-            x,y = x*20,y*20
+            x, y = m[2]
+            x, y = x*20, y*20
 
-            sub_image = mpa[x:x+20,y:y+20]
+            sub_image = mpa[x:x+20, y:y+20]
             code = m[0]
-            self.image_dict[code] = sub_image.make_surface(),str(m[1])
-            self.image_dict[code][0].set_colorkey((255,255,255), pygame.RLEACCEL)
+            self.image_dict[code] = sub_image.make_surface(), str(m[1])
+            self.image_dict[code][0].set_colorkey((255, 255, 255), pygame.RLEACCEL)
 
-        pp = pygame.Surface((20,20)).convert()
-        pp.set_colorkey((255,255,255))
-        pp.fill((255,255,255))
-        self.image_dict[0] = pp,"nothing.transparent"
+        pp = pygame.Surface((20, 20)).convert()
+        pp.set_colorkey((255, 255, 255))
+        pp.fill((255, 255, 255))
+        self.image_dict[0] = pp, "nothing.transparent"
 
         ######### Optimize above later
 

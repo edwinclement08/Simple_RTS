@@ -43,6 +43,7 @@ class unit_non_attacking:
 
         # other data relevant to stuff
         self.health = self.total_health
+        self.time_since_destroyed = 0
 
         self.idle = True
         self.task_done = 100
@@ -73,26 +74,27 @@ class unit_non_attacking:
                 self.display_image.blit(self.image_idle[self.frame_no], (0, 0))
                 self.time_last_updated = pygame.time.get_ticks()
 
-        if not self.idle and not self.wait:
-            curtime = pygame.time.get_ticks()
-            time_done = curtime - self.time_task_started
-            self.task_done = time_done * 100 / self.total_time_for_task
+            if not self.idle and not self.wait:
+                curtime = pygame.time.get_ticks()
+                time_done = curtime - self.time_task_started
+                self.task_done = time_done * 100 / self.total_time_for_task
 
-            if self.task_done >= 100:
-                self.do_task()
+                if self.task_done >= 100:
+                    self.do_task()
 
-                self.idle = True
-                self.task_done = 100
-                self.time_task_started = None
-                self.total_time_for_task = 0
-                self.task_args = []
-                self.task_doing_name = ""
+                    self.idle = True
+                    self.task_done = 100
+                    self.time_task_started = None
+                    self.total_time_for_task = 0
+                    self.task_args = []
+                    self.task_doing_name = ""
 
     def got_hit(self, points):
         if self.health - points >= 0:
             self.health = self.health - points
         else:
             self.destroyed = True
+            self.time_since_destroyed = pygame.time.get_ticks()
             self.health = 0
 
     def get_free_neighbour(self):
@@ -190,38 +192,41 @@ class unit_attacking:
     def update(self):
         self.any_other_stuff()
         self.display_image = self.images[self.cur_direction]
-        if self.moving:
-            if self.move_path or self.last_move:
-                if self.move_progress >= self.speed:
-                    print self.cur_direction
-                    self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
-                    self.position = self.position[0] + self.cur_direction[0], self.position[1] + self.cur_direction[1]
-                    self.move_progress = 0
-                    self.dx, self.dy = 0, 0
-                    if not self.last_move:
-                        self.cur_direction = self.move_path.pop(0)
-                        if len(self.move_path) == 0:
-                            self.last_move = True
-                    else:
-                        self.last_move = False
-                    self.time_since_last_inc = pygame.time.get_ticks()
-                else:
-                    if pygame.time.get_ticks() - self.time_since_last_inc >= self.speed:
-                        move_per_20 = (self.move_progress/self.speed)*20.0
-                        self.dx, self.dy = self.cur_direction[0]*move_per_20, self.cur_direction[1]*move_per_20
 
-                        if self.cur_direction[0] == 0:
-                            self.dx = 0
-                        if self.cur_direction[1] == 0:
-                            self.dy = 0
-                        self.move_progress += 1.0
+        if self.destroyed:
+            pass
+        else:
+            if self.moving:
+                if self.move_path or self.last_move:
+                    if self.move_progress >= self.speed:
+                        self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
+                        self.position = self.position[0] + self.cur_direction[0], self.position[1] + self.cur_direction[1]
+                        self.move_progress = 0
+                        self.dx, self.dy = 0, 0
+                        if not self.last_move:
+                            self.cur_direction = self.move_path.pop(0)
+                            if len(self.move_path) == 0:
+                                self.last_move = True
+                        else:
+                            self.last_move = False
                         self.time_since_last_inc = pygame.time.get_ticks()
-            else:
-                self.moving = False
-                self.allegiance.parent.game_data.remove_mark(self.position)
-                self.move_path = []
-                self.move_progress = 0  # in percent
-                self.time_since_last_inc = pygame.time.get_ticks()
+                    else:
+                        if pygame.time.get_ticks() - self.time_since_last_inc >= self.speed:
+                            move_per_20 = (self.move_progress/self.speed)*20.0
+                            self.dx, self.dy = self.cur_direction[0]*move_per_20, self.cur_direction[1]*move_per_20
+
+                            if self.cur_direction[0] == 0:
+                                self.dx = 0
+                            if self.cur_direction[1] == 0:
+                                self.dy = 0
+                            self.move_progress += 1.0
+                            self.time_since_last_inc = pygame.time.get_ticks()
+                else:
+                    self.moving = False
+                    self.allegiance.parent.game_data.remove_mark(self.position)
+                    self.move_path = []
+                    self.move_progress = 0  # in percent
+                    self.time_since_last_inc = pygame.time.get_ticks()
 
     def move(self, tx, ty):
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
@@ -249,13 +254,13 @@ class unit_attacking:
         pass
 
     def right_click_handle(self, x, y):
-        #print x, y, 'gsege'
         if self.allegiance.parent.game_data.places_truly_empty[y][x]:
             self.move(x, y)
         else:
             click = self.allegiance.parent.game_data.get_unit(x, y)
             if click:   # and issubclass():
-                print click[0].allegiance
+                # print click[0].allegiance
+                pass
         pass
 
 
@@ -280,7 +285,7 @@ class Copter(unit_attacking):
 
     range = 10
     time_for_reload = 700
-    speed = 10
+    speed = 8
 
     image_file = "Copter.bmp"
 
