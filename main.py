@@ -55,8 +55,15 @@ class Main():
 
         # self.first_run = 1
 
-        q = ammunition((7, 7), math.radians(-60), 'bullet')
+        q = ammunition((7, 7), math.radians(-60), 'missile')
+        qa = ammunition((8, 9), math.radians(-40), 'ecm')
+        qs = ammunition((6, 3), math.radians(-12), 'flame thrower')
+        qd = ammunition((10, 1), math.radians(-80), 'bullet')
+
         self.firearms.add(q)
+        self.firearms.add(qs)
+        self.firearms.add(qd)
+        self.firearms.add(qa)
 
         self.mainloop()
 

@@ -18,9 +18,9 @@ class ammunition:
 class firearms:
     image_file = "units\\ammunition.bmp"
     get_speed = {'bullet': 0.005,
-                 'ecm': 0.05,
-                 'missile': 0.03,
-                 'flame thrower': 0.02}
+                 'ecm': 0.008,
+                 'missile': 0.004,
+                 'flame thrower': 0.002}
     get_range = {'bullet': 10,
                  'ecm': 10,
                  'missile': 20,
@@ -80,10 +80,10 @@ class firearms:
         self.remove_out_of_range()
 
         cp_x, cp_y = self.parent.map.cur_pos
-        self.x0, self.y0, self.x1, self.y1 = cp_x, cp_y, cp_x + self.screen_width, cp_y + self.screen_height+3
-        # print self.x0, self.y0, self.x1, self.y1,
+        self.x0, self.y0, self.x1, self.y1 = cp_x, cp_y, cp_x + self.screen_width, cp_y + self.screen_height
 
         self.dirty_rect = []
+
         for t in self.ammunition_list:
             x, y = t.start_position
             u_dx, u_dy = t.distance_traveled * math.cos(t.angle), t.distance_traveled * -math.sin(t.angle)
@@ -98,5 +98,5 @@ class firearms:
 
                 blit_x = rel_x*20 + (u_dx - dx)*20
                 blit_y = rel_y*20 + (u_dy - dy)*20
-                self.dirty_rect.append(pygame.Rect(blit_x, blit_y, 10, 10))
+                self.dirty_rect.append(pygame.Rect(blit_x-10, blit_y-10, 30, 30))
                 self.screen.blit(t.image, (blit_x, blit_y))

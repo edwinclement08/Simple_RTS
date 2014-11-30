@@ -53,7 +53,7 @@ class Map:
             self.cur_pos = x,y
         self.update()
 
-    def move_pos(self,x,y):
+    def move_pos(self, x, y):
         self.set_cur_pos(self.cur_pos[0] + x,self.cur_pos[1] + y)
 
     def update(self):
@@ -63,7 +63,7 @@ class Map:
             for x in xrange(self.cur_pos[0], self.cur_pos[0]+self.window_w):
                 self.screen.blit(self.image_dict[self.main_layer[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
                 x0 += 1
-            y0+=1
+            y0 += 1
 
         y0 = 0
         for y in xrange(self.cur_pos[1], self.cur_pos[1]+self.window_h):
