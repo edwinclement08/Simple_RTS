@@ -1,6 +1,6 @@
 __author__ = 'Edwin Clement'
 import pygame
-from pygame.locals import *
+# from pygame.locals import *
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
@@ -11,6 +11,12 @@ class unit_non_attacking:
     destroyed = False
     frame_delay_time = 150
     cost = 0
+    w, h = 2, 3
+    total_health = 0
+
+    hit_before = False
+    time_last_hit = 0
+    # should_health_be_displayed = False
 
     def __init__(self, allegiance, x, y):
         # data about itself
@@ -28,7 +34,7 @@ class unit_non_attacking:
 
         self.image_idle = []
         self.no_of_frames = len(px_image)/(self.w*20)
-        for t in range(self.no_of_frames):
+        for t in xrange(self.no_of_frames):
             self.image_idle.append(px_image[t*(self.w*20):t*(self.w*20)+(self.h*20)-1, 0:(self.h*20)-1].make_surface())
         self.image_destroyed = px_image[0:self.w*20, self.h*20:(self.h*20)*2-1].make_surface()
 
@@ -89,10 +95,18 @@ class unit_non_attacking:
                     self.task_args = []
                     self.task_doing_name = ""
 
+        if pygame.time.get_ticks() - self.time_last_hit > 5000:
+            self.hit_before = False
+
     def got_hit(self, points):
+        if self.hit_before:
+            pass
+        else:
+            self.time_last_hit = pygame.time.get_ticks()
+            self.hit_before = True
+
         if self.health - points >= 0:
             self.health = self.health - points
-            self.allegiance.parent.message.put_message(str(self.health))
         else:
             self.destroyed = True
             self.time_since_destroyed = pygame.time.get_ticks()
@@ -103,8 +117,8 @@ class unit_non_attacking:
 
         directions = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
         occupied = set([])
-        for my in range(y, y+h):
-            for mx in range(x, x+w):
+        for my in xrange(y, y+h):
+            for mx in xrange(x, x+w):
                 occupied.add((mx, my))
 
         all_cover = set([])
@@ -167,6 +181,9 @@ class unit_attacking:
     ammo = ''
     w, h = 1, 1
 
+    hit_before = False
+    time_last_hit = 0
+
     def __init__(self, allegiance, x, y):
         self.allegiance = allegiance
         self.position = [x, y]
@@ -202,7 +219,8 @@ class unit_attacking:
                 if self.move_path or self.last_move:
                     if self.move_progress >= self.speed:
                         self.allegiance.parent.game_data.move_unit(self, self.position, self.cur_direction)
-                        self.position = self.position[0] + self.cur_direction[0], self.position[1] + self.cur_direction[1]
+                        self.position = self.position[0] + self.cur_direction[0],\
+                            self.position[1] + self.cur_direction[1]
                         self.move_progress = 0
                         self.dx, self.dy = 0, 0
                         if not self.last_move:
@@ -230,6 +248,9 @@ class unit_attacking:
                     self.move_progress = 0  # in percent
                     self.time_since_last_inc = pygame.time.get_ticks()
 
+        if pygame.time.get_ticks() - self.time_last_hit > 2000:
+            self.hit_before = False
+
     def move(self, tx, ty):
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
 
@@ -246,10 +267,14 @@ class unit_attacking:
         pass
 
     def got_hit(self, points):
+        if self.hit_before:
+            pass
+        else:
+            self.time_last_hit = pygame.time.get_ticks()
+            self.hit_before = True
+
         if self.health - points >= 0:
             self.health = self.health - points
-
-
         else:
             self.destroyed = True
             self.health = 0
@@ -552,7 +577,7 @@ class command_center(unit_non_attacking):
         self.wait = False
         self.positioning = False
         self.time_task_started = pygame.time.get_ticks()
-        self.task_args = self.task_args + list(self.place_pos)
+        self.task_args = self.task_args + self.place_pos[:]
         pass
 
     def any_other_stuff(self):

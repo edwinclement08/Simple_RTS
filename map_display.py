@@ -1,8 +1,8 @@
 __author__ = 'Edwin Clement'
 import json
 import pygame
-import sys
-from pygame.locals import *
+# import sys
+# from pygame.locals import *
 
 
 class Map:
@@ -50,11 +50,11 @@ class Map:
 
     def set_cur_pos(self, x=0, y=0):
         if not(x < 0 or y < 0 or x+self.window_w >= 100 or y+self.window_h >= 100):
-            self.cur_pos = x,y
+            self.cur_pos = x, y
         self.update()
 
     def move_pos(self, x, y):
-        self.set_cur_pos(self.cur_pos[0] + x,self.cur_pos[1] + y)
+        self.set_cur_pos(self.cur_pos[0] + x, self.cur_pos[1] + y)
 
     def update(self):
         y0 = 0
@@ -85,7 +85,7 @@ class Map:
         else:
             return False
 
-    def get_terrain_type(self,x,y):
+    def get_terrain_type(self, x, y):
         if self.image_dict[self.overlay[y][x]][1] == "nothing.transparent":
             return self.image_dict[self.main_layer[y][x]][1].split('.')
         else:

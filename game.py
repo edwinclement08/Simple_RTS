@@ -1,8 +1,6 @@
 __author__ = 'Edwin Clement'
-import json
 import pygame
 import sys
-from pygame.locals import *
 sys.path[0:0] = ("units",)
 import unit_base
 
@@ -78,6 +76,9 @@ class GameData:
             else:
                 x = (m[0].position[0] - self.parent.map.cur_pos[0])*20+self.parent.map.x_offset
                 y = (m[0].position[1] - self.parent.map.cur_pos[1])*20+self.parent.map.y_offset
+            if m[0].hit_before:
+                self.mini_health_bar(m[0], x, y)
+
             m[0].update()
             self.screen.blit(m[0].display_image, (x, y))
 
@@ -88,6 +89,17 @@ class GameData:
                     self.parent.map.movable_region[y][x] \
                     and not((x, y) in self.marked_place)
         # print (pygame.time.get_ticks() - qq), "easfwef"
+
+    def mini_health_bar(self, unit, pos_x, pos_y):
+        health_percent = unit.health*1.0 / unit.total_health
+        health_box_total_width = unit.w*20
+        health_box_width = health_box_total_width * health_percent
+        print health_box_width
+        red_box = (pos_x + health_box_width, pos_y - 10, health_box_total_width - health_box_width, 3)
+        green_box = (pos_x, pos_y - 10, health_box_width, 3)
+
+        pygame.draw.rect(self.screen, (160, 0, 0), red_box)
+        pygame.draw.rect(self.screen, (0, 160, 0), green_box)
 
     def place_unit(self, unit):
         x, y = unit.position
@@ -183,8 +195,8 @@ class GameData:
                         # x1, y1 = w[0].w + w[0].x, w[0].h + w[0].y
                         if allegiance == w[0].allegiance:
                             selection.add((w[0], x0, y0, w[0].w, w[0].h))
-            self.selection = list(selection)
-            return list(selection)
+            self.selection = selection[:]
+            return selection[:]
         return None
 
     def delete_unit(self, unit):

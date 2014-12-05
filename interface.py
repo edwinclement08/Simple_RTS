@@ -140,6 +140,7 @@ class Interface:
         x = (self.mouse_pos[0]-self.parent.map.x_offset)/20+self.parent.map.cur_pos[0]
         y = (self.mouse_pos[1]-self.parent.map.y_offset)/20+self.parent.map.cur_pos[1]
 
+        ## handles Mouse cursor images
         if (not self.parent.game_data.is_place_empty(x, y)) and (self.selected_unit or self.multiple_selected) and \
                 self.parent.game_data.get_unit(x, y) and \
                 self.parent.game_data.get_unit(x, y)[0].allegiance == self.parent.computer:
@@ -306,7 +307,6 @@ class Interface:
                 text = self.medium2_font.render(self.parent.game_data.get_unit(hx, hy)[0].name, 1, (30, 30, 30),
                                                 (128, 160, 192))
 
-                # print self.parent.game_data.get_unit(hx, hy)
                 self.screen.blit(text, (nx-40, ny))
 
         # for selection options

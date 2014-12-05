@@ -1,5 +1,5 @@
 __author__ = 'Edwin Clement'
-import pygame, sys, pygame.gfxdraw
+import pygame
 if not pygame.font:
     print 'Warning, fonts disabled'
 
