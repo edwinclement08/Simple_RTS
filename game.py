@@ -195,8 +195,8 @@ class GameData:
                         # x1, y1 = w[0].w + w[0].x, w[0].h + w[0].y
                         if allegiance == w[0].allegiance:
                             selection.add((w[0], x0, y0, w[0].w, w[0].h))
-            self.selection = selection[:]
-            return selection[:]
+            self.selection = list(selection)
+            return list(selection)
         return None
 
     def delete_unit(self, unit):

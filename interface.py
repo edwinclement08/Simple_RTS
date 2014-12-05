@@ -151,7 +151,7 @@ class Interface:
                 self.multi_attacking_units = False
             else:
                 for k in self.multiple_selected:
-                    if isinstance(k, self.parent.unit_base.unit_attacking):
+                    if isinstance(k, unit_base.unit_attacking):
                         self.multi_attacking_units = True
                         break
                 else:
