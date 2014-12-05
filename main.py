@@ -13,6 +13,7 @@ from find_path import *
 from ammunition import *
 import math
 
+
 class Main():
     screen_dim = w, h = 800, 480
 
@@ -40,30 +41,29 @@ class Main():
         self.firearms = firearms(self)
 
         self.game_data.place_unit(command_center(self.computer, 20, 20, self))
-
         self.game_data.place_unit(command_center(self.human, 10, 10, self))
 
         m = resource_center(self.human, 14, 14)
-        m.health = 12
-        m.got_hit(13)
-
         self.game_data.place_unit(m)
         self.human.units.append(m)
+
         m = helipad(self.human, 16, 16)
         self.human.units.append(m)
         self.game_data.place_unit(m)
 
 
-        q = ammunition((7, 7), math.radians(-55), 'missile')
-        qa = ammunition((8, 9), math.radians(-40), 'ecm')
-        qs = ammunition((6, 3), math.radians(-12), 'flame thrower')
-        qd = ammunition((10, 1), math.radians(-80), 'bullet')
+        # q = ammunition((7, 7), math.radians(-55), 'missile')
+        # qa = ammunition((8, 9), math.radians(-40), 'ecm')
+        # qs = ammunition((6, 3), math.radians(-12), 'flame thrower')
+        # qd = ammunition((10, 1), math.radians(-80), 'bullet')
 
-        self.firearms.add(q)
-        self.firearms.add(qs)
-        self.firearms.add(qd)
-        self.firearms.add(qa)
+        # self.firearms.add(q)
+        # self.firearms.add(qs)
+        # self.firearms.add(qd)
+        # self.firearms.add(qa)
 
+        self.master_debug_list = []
+        self.qwerty = pygame.image.load("units\\gray_out_area.bmp").convert_alpha()
         self.mainloop()
 
     def mainloop(self):
@@ -72,24 +72,47 @@ class Main():
         while running:
             clock.tick(40)
             # print clock.get_fps()
+
             self.interface.update()
+
             self.map.update()
+           # print (pygame.time.get_ticks() - qq),"easfwef"
+
+            qq = pygame.time.get_ticks()
+
             self.game_data.update()
             self.message.update()
-            # qq = pygame.time.get_ticks()
             self.firearms.update()
-            # print pygame.time.get_ticks() - qq
-
             self.computer.update()
             self.human.update()
 
+            # print (pygame.time.get_ticks() - qq)
+
+            qq = pygame.time.get_ticks()
             self.screen.blit(self.map.screen, (0, 0))
             self.screen.blit(self.game_data.screen, (0, 0))
             self.screen.blit(self.interface.screen, (0, 0))
             self.screen.blit(self.message.screen, (0, 0))
             self.screen.blit(self.firearms.screen, (0, 0))
+############################################################################
+            cx, cy = self.map.cur_pos
+            wx, wy = self.map.window_w, self.map.window_h
+            offx, offy = self.map.x_offset, self.map.y_offset
+            for ix, iy in self.master_debug_list:
+                if cx < ix < cx+wx and cy < iy < cy+iy:
+                    self.screen.blit(self.qwerty, ((ix-cx)*20+offx, (iy-cy)*20+offy))
+############################################################################
+            # print (pygame.time.get_ticks() - qq)
 
+            qq = pygame.time.get_ticks()
             self.true_screen.blit(self.screen, (0, 0))
             pygame.display.update()
+            # print (pygame.time.get_ticks() - qq)
+
+    def debug(self, *args):
+        x, y = args[0], args[1]
+        # self.master_debug_list.append((x, y))
+        # self.screen.blit(self.qwerty, (x, y))
+
 
 runtime = Main()

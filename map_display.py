@@ -44,7 +44,7 @@ class Map:
         pp.fill((255, 255, 255))
         self.image_dict[0] = pp, "nothing.transparent"
 
-        ######### Optimize above later
+        self.movable_region = [[self.is_cell_movable(klx, kly) for klx in xrange(100)] for kly in xrange(100)]
 
         self.update()
 
@@ -61,7 +61,7 @@ class Map:
         for y in xrange(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
             for x in xrange(self.cur_pos[0], self.cur_pos[0]+self.window_w):
-                self.screen.blit(self.image_dict[self.main_layer[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
+                self.screen.blit(self.image_dict[self.main_layer[y][x]][0], (x0*20+self.x_offset, y0*20+self.y_offset))
                 x0 += 1
             y0 += 1
 
@@ -69,7 +69,7 @@ class Map:
         for y in xrange(self.cur_pos[1], self.cur_pos[1]+self.window_h):
             x0 = 0
             for x in xrange(self.cur_pos[0], self.cur_pos[0]+self.window_w):
-                self.screen.blit(self.image_dict[self.overlay[y][x]][0],(x0*20+self.x_offset,y0*20+self.y_offset))
+                self.screen.blit(self.image_dict[self.overlay[y][x]][0], (x0*20+self.x_offset, y0*20+self.y_offset))
                 x0 += 1
             y0 += 1
 

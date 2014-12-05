@@ -92,6 +92,7 @@ class unit_non_attacking:
     def got_hit(self, points):
         if self.health - points >= 0:
             self.health = self.health - points
+            self.allegiance.parent.message.put_message(str(self.health))
         else:
             self.destroyed = True
             self.time_since_destroyed = pygame.time.get_ticks()
@@ -163,6 +164,7 @@ class unit_attacking:
     selection_options = {
     }
 
+    ammo = ''
     w, h = 1, 1
 
     def __init__(self, allegiance, x, y):
@@ -246,6 +248,8 @@ class unit_attacking:
     def got_hit(self, points):
         if self.health - points >= 0:
             self.health = self.health - points
+
+
         else:
             self.destroyed = True
             self.health = 0
@@ -253,15 +257,19 @@ class unit_attacking:
     def do_selection(self, sel):
         pass
 
+    def fire_at(self, rdx, rdy):
+        wx, wy = self.position
+
+        self.allegiance.parent.debug(rdx, rdy)
+        self.allegiance.parent.firearms.add(self.ammo, (wx, wy), (rdx, rdy), self)
+
     def right_click_handle(self, x, y):
         if self.allegiance.parent.game_data.places_truly_empty[y][x]:
             self.move(x, y)
         else:
-            click = self.allegiance.parent.game_data.get_unit(x, y)
-            if click:   # and issubclass():
-                # print click[0].allegiance
-                pass
-        pass
+            is_there_unit = self.allegiance.parent.game_data.get_unit(x, y)
+            if is_there_unit:
+                self.fire_at(x, y)
 
 
 class Hovercraft(unit_attacking):
@@ -274,6 +282,9 @@ class Hovercraft(unit_attacking):
     speed = 12
 
     image_file = "Hovercraft.bmp"
+
+    ammo = 'bullet'
+    reload = 500
 
     w, h = 1, 1
 
@@ -289,6 +300,9 @@ class Copter(unit_attacking):
 
     image_file = "Copter.bmp"
 
+    ammo = 'missile'
+    reload = 900
+
     w, h = 1, 1
 
 
@@ -302,6 +316,9 @@ class Paladin(unit_attacking):
     speed = 18
 
     image_file = "Paladin.bmp"
+    reload = 750
+
+    ammo = 'ecm'
 
     w, h = 1, 1
 
@@ -317,6 +334,9 @@ class Mobile_Missile(unit_attacking):
 
     image_file = "Mobile_Missile.bmp"
 
+    ammo = 'missile'
+    reload = 1000
+
     w, h = 1, 1
 
 
@@ -330,6 +350,9 @@ class Gatling_Gun(unit_attacking):
     speed = 20
 
     image_file = "Gattling_Gun.bmp"
+
+    ammo = 'bullet'
+    reload = 300
 
     w, h = 1, 1
 ########################################################################################################################

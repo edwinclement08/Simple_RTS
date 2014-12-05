@@ -174,7 +174,9 @@ class Interface:
             self.current_cursor = self.cursor_images["normal"]
 
         # the borders
+        # qqq = pygame.time.get_ticks()
         self.screen.fill((255, 255, 255))
+
         self.screen.blit(self.image_dict["border.left"], (0, 20))
         self.screen.blit(self.image_dict["border.right"], (self.parent.screen_dim[0]-20, 20))
         self.screen.blit(self.image_dict["border.top"], (20, 0))
@@ -369,6 +371,8 @@ class Interface:
         if not self.game_area.collidepoint(pygame.mouse.get_pos()):
             self.current_cursor = self.cursor_images["default"]
         self.screen.blit(self.current_cursor, pygame.mouse.get_pos())
+
+        # print (pygame.time.get_ticks() - qqq)
 
     def process_events(self):
         for event in pygame.event.get():

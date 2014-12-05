@@ -81,9 +81,13 @@ class GameData:
             m[0].update()
             self.screen.blit(m[0].display_image, (x, y))
 
+        qq = pygame.time.get_ticks()
         for y in xrange(100):
             for x in xrange(100):
-                self.places_truly_empty[y][x] = self.is_place_truly_empty(x, y)
+                self.places_truly_empty[y][x] = not self.places_occupied[y][x] and \
+                    self.parent.map.movable_region[y][x] \
+                    and not((x, y) in self.marked_place)
+        # print (pygame.time.get_ticks() - qq), "easfwef"
 
     def place_unit(self, unit):
         x, y = unit.position
@@ -129,7 +133,7 @@ class GameData:
             return False
 
     def is_place_truly_empty(self, x, y):
-        if not self.places_occupied[y][x] and self.parent.map.is_cell_movable(x, y)\
+        if not self.places_occupied[y][x] and self.parent.map.movable_region[y][x]\
                 and not((x, y) in self.marked_place):
             return 1
         else:
