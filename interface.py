@@ -441,11 +441,21 @@ class Interface:
                         self.parent.map.y0 <= event.pos[1] <= self.parent.map.y1 and \
                         event.button == 3:                     # same as above ,right click.
                     if self.selected_unit:
-                        # print self.parent.pathfinder.get_path((20, 9), (22, 12))
                         self.selected_unit.right_click_handle(*self.conv(event.pos[0], event.pos[1]))
                         pass
                     elif self.multiple_selected:
-                        pass
+                        sub_path = self.parent.game_data.get_spiral_loop(self.conv(event.pos[0], event.pos[1]), len(self.multiple_selected))
+                        no, qdx, qdy = 0, 0, 0
+                        for t in self.multiple_selected:
+                            no += 1
+                            qdx, qdy = qdx + t[0].position[0], qdy + t[0].position[1]
+                        avgx, avgy = qdx / no, qdy / no
+                        sub_path_no = 0
+                        for wt in self.multiple_selected:
+
+
+
+                    pass
             elif event.type == MOUSEBUTTONUP:
                 if self.drag_start:
                     self.drag_end = event.pos
@@ -475,11 +485,16 @@ class Interface:
                         self.image_for_selection = sel[0][0].selection_image
                         self.selected_options = sel[0][0].selection_options
                     else:
-                        self.multiple_selected = sel[:9]
+                        total_selection = sel
+                        selection_only_movable = []
+                        for t in total_selection:
+                            if issubclass(t[0].__class__, unit_base.unit_attacking):
+                                selection_only_movable.append(t)
+                        self.multiple_selected = selection_only_movable[:9]
                         self.selected_unit = False
-                        self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
-                        # print self.image_for_selection
-                        self.selected_options = None
+                        if self.multiple_selected:
+                            self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
+                            self.selected_options = None
             elif event.type == MOUSEMOTION:
                 self.mouse_pos = pygame.mouse.get_pos()
                 self.time_last_moved = pygame.time.get_ticks()

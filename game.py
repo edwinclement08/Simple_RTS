@@ -4,7 +4,6 @@ import sys
 sys.path[0:0] = ("units",)
 import unit_base
 
-
 class player():
     def __init__(self, parent):
         self.parent = parent
@@ -22,6 +21,7 @@ class player():
         g = 0
         while g < len(self.units):
             if self.units[g].destroyed and (pygame.time.get_ticks() - self.units[g].time_since_destroyed) > 3000:
+                print "sswefreswfcvjbvzkvh"
                 a = self.units.pop(g)
                 self.parent.game_data.delete_unit(a)
                 del a
@@ -76,7 +76,8 @@ class GameData:
             else:
                 x = (m[0].position[0] - self.parent.map.cur_pos[0])*20+self.parent.map.x_offset
                 y = (m[0].position[1] - self.parent.map.cur_pos[1])*20+self.parent.map.y_offset
-            if m[0].hit_before:
+
+            if m[0].hit_before and not m[0].destroyed:
                 self.mini_health_bar(m[0], x, y)
 
             m[0].update()
@@ -94,7 +95,7 @@ class GameData:
         health_percent = unit.health*1.0 / unit.total_health
         health_box_total_width = unit.w*20
         health_box_width = health_box_total_width * health_percent
-        print health_box_width
+        #print health_box_width
         red_box = (pos_x + health_box_width, pos_y - 10, health_box_total_width - health_box_width, 3)
         green_box = (pos_x, pos_y - 10, health_box_width, 3)
 
@@ -207,3 +208,30 @@ class GameData:
         for my in xrange(sh):
             for mx in xrange(sw):
                 self.places_occupied[y+my][x+mx] = 0
+
+    def get_spiral_loop(self, start, no_of_units):
+        L = 4
+        x, y = (0, 0)
+        unchecked = []
+        dx = 0
+        dy = -1
+        for i in range(L**2):
+            if (-L/2 < x <= L/2) and (-L/2 < y <= L/2):
+                fx, fy = (x + start[0], y + start[1])
+                if 0 <= fx <= 99 and 0 <= fy <= 99:
+                    unchecked.append((fx, fy))
+            if x == y or (x < 0 and x == -y) or (x > 0 and x == 1-y):
+                dx, dy = -dy, dx
+            x, y = x+dx, y+dy
+
+        good_spots = []
+        for tx, ty in unchecked:
+            if self.is_place_empty(tx, ty):
+                if len(good_spots) < no_of_units:
+                    path = self.parent.pathfinder.get_path(start, (tx, ty))
+                    if path:
+                        good_spots.append(((tx, ty), path))
+                else:
+                    break
+
+        return good_spots

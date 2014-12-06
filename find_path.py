@@ -6,7 +6,6 @@ from heapq import heappush, heappop # for priority queue
 import math
 
 
-
 class node:
     # current position
     xPos = 0
@@ -69,7 +68,6 @@ class AStar:
         n0.updatePriority(xFinish, yFinish)
         heappush(pq[pqi], n0)
         open_nodes_map[yStart][xStart] = n0.priority # mark it on the open nodes map
-
 
         # A* search
         while len(pq[pqi]) > 0:
@@ -164,8 +162,3 @@ class AStar:
 
         route = self.pathFind(the_map, directions, dx, dy, x0, y0, x1, y1)
         return route
-
-
-s = AStar("dgsgv")
-
-

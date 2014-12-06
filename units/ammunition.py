@@ -71,7 +71,7 @@ class firearms:
             ammo = ammunition((self_x, self_y), angle, firearm_name, parent_unit)
             self.ammunition_list.append(ammo)
 
-            ammo.image = pygame.transform.rotate(self.bullet_images[ammo.type], math.degrees(ammo.angle))
+            ammo.image = pygame.transform.rotate(self.bullet_images[ammo.type], math.degrees(ammo.angle + math.pi))
 
             return True
         else:
@@ -106,10 +106,11 @@ class firearms:
             u_dx, u_dy = t.distance_traveled * -math.cos(t.angle), t.distance_traveled * math.sin(t.angle)
             dx, dy = math.floor(u_dx), math.floor(u_dy)
 
+            cdx, cdy = int(x + math.ceil(u_dx)), int(y + math.ceil(u_dy))
             fx, fy = int(x + dx), int(y + dy)
 
-            if self.x0 < fx < self.x1 and self.y0 < fy < self.y1:
-
+            if self.x0 < (fx-cp_x)*20+offset_x < self.x1 and self.y0 < (fy-cp_y)*20+offset_y< self.y1 or \
+                    self.x0 < (cdx-cp_x)*20+offset_x < self.x1 and self.y0 < (cdy-cp_y)*20+offset_y< self.y1:
                 rel_x = fx - self.x0
                 rel_y = fy - self.y0
 
@@ -123,3 +124,10 @@ class firearms:
                 if unit_data != t.parent:
                     unit_data.got_hit(t.red_points)
                     t.has_hit = True
+            elif self.parent.game_data.has_any_unit(cdx, cdy):
+                unit_data = self.parent.game_data.get_unit(cdx, cdy)[0]
+                if unit_data != t.parent:
+                    unit_data.got_hit(t.red_points)
+                    t.has_hit = True
+            elif not self.parent.map.is_cell_free(fx, fy):
+                t.has_hit = True

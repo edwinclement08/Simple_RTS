@@ -28,7 +28,7 @@ class Main():
         self.screen.fill((255, 255, 255))
         self.screen.set_colorkey((255, 255, 255))
 
-        self.true_screen = pygame.display.set_mode(self.screen_dim)  # , FULLSCREEN)
+        self.true_screen = pygame.display.set_mode(self.screen_dim)   # , FULLSCREEN)
 
         self.computer = player(self)
         self.human = player(self)
@@ -59,8 +59,8 @@ class Main():
         clock = pygame.time.Clock()
         running = 1
         while running:
-            clock.tick(40)
-            # print clock.get_fps()
+            clock.tick(50)
+            #print clock.get_fps()
 
             self.interface.update()
 
@@ -72,6 +72,7 @@ class Main():
             self.game_data.update()
             self.message.update()
             self.firearms.update()
+
             self.computer.update()
             self.human.update()
 

@@ -251,8 +251,11 @@ class unit_attacking:
         if pygame.time.get_ticks() - self.time_last_hit > 2000:
             self.hit_before = False
 
-    def move(self, tx, ty):
+    def move(self, tx, ty, secondary_path=None):
+        self.sp = secondary_path
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
+        if secondary_path:
+            self.move_path = self.move_path + secondary_path
 
         if self.move_path:
             self.allegiance.parent.game_data.set_as_marked((tx, ty))
@@ -577,7 +580,7 @@ class command_center(unit_non_attacking):
         self.wait = False
         self.positioning = False
         self.time_task_started = pygame.time.get_ticks()
-        self.task_args = self.task_args + self.place_pos[:]
+        self.task_args = self.task_args + list(self.place_pos)
         pass
 
     def any_other_stuff(self):

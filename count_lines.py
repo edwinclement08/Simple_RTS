@@ -17,5 +17,6 @@ for e in lis:
 
 print no_of_ifs
 
-
+import time
+time.sleep(23)
 
