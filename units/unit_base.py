@@ -257,9 +257,11 @@ class unit_attacking:
         self.is_there_a_secondary_path = secondary_path
         print secondary_path, 'gbverrg'
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
-
+        print self.move_path
         if self.move_path:
+            print "move path"
             if self.is_there_a_secondary_path:
+                print "secondary path"
                 self.move_path = self.move_path + secondary_path
                 self.allegiance.parent.game_data.set_as_marked(secondary_end_point)
                 self.moving = True

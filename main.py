@@ -60,7 +60,7 @@ class Main():
         running = 1
         while running:
             clock.tick(50)
-            #print clock.get_fps()
+            # print clock.get_fps()
 
             self.interface.update()
 

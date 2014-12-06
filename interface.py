@@ -133,6 +133,10 @@ class Interface:
         # placing
         self.placeable = False
 
+        p_map = self.parent.map
+        self.map_x, self.map_y, self.map_x1, self.map_y1 = p_map.x_offset, p_map.y_offset, \
+                                       p_map.x_offset + p_map.window_w*20, p_map.y_offset + p_map.window_h*20
+
         self.update()
 
     def update(self):
@@ -466,30 +470,29 @@ class Interface:
                               [self.drag_end[0], self.drag_start[0]]][self.drag_start[0] >= self.drag_end[0]]
                     y0, y1 = [[self.drag_start[1], self.drag_end[1]],
                               [self.drag_end[1], self.drag_start[1]]][self.drag_start[1] >= self.drag_end[1]]
-
-                    sel = self.parent.game_data.select_units(x0, y0, x1, y1, self.parent.human)
-
-                    if not sel:
-                        self.multiple_selected = False
-                        self.selected_unit = False
-                        self.image_for_selection = None
-                        self.selected_options = []
-                    elif len(sel) == 1:
-                        self.multiple_selected = False
-                        self.selected_unit = sel[0][0]
-                        self.image_for_selection = sel[0][0].selection_image
-                        self.selected_options = sel[0][0].selection_options
-                    else:
-                        total_selection = sel
-                        selection_only_movable = []
-                        for t in total_selection:
-                            if issubclass(t[0].__class__, unit_base.unit_attacking):
-                                selection_only_movable.append(t)
-                        self.multiple_selected = selection_only_movable[:9]
-                        self.selected_unit = False
-                        if self.multiple_selected:
-                            self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
-                            self.selected_options = None
+                    if self.map_x < x0 < self.map_x1 and self.map_y < y0 < self.map_y1:
+                        sel = self.parent.game_data.select_units(x0, y0, x1, y1, self.parent.human)
+                        if not sel:
+                            self.multiple_selected = False
+                            self.selected_unit = False
+                            self.image_for_selection = None
+                            self.selected_options = []
+                        elif len(sel) == 1:
+                            self.multiple_selected = False
+                            self.selected_unit = sel[0][0]
+                            self.image_for_selection = sel[0][0].selection_image
+                            self.selected_options = sel[0][0].selection_options
+                        else:
+                            total_selection = sel
+                            selection_only_movable = []
+                            for t in total_selection:
+                                if issubclass(t[0].__class__, unit_base.unit_attacking):
+                                    selection_only_movable.append(t)
+                            self.multiple_selected = selection_only_movable[:9]
+                            self.selected_unit = False
+                            if self.multiple_selected:
+                                self.image_for_selection = [f[0].selection_image for f in self.multiple_selected]
+                                self.selected_options = None
             elif event.type == MOUSEMOTION:
                 self.mouse_pos = pygame.mouse.get_pos()
                 self.time_last_moved = pygame.time.get_ticks()
