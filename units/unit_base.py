@@ -178,6 +178,8 @@ class unit_attacking:
     selection_options = {
     }
 
+    is_there_a_secondary_path = None
+
     ammo = ''
     w, h = 1, 1
 
@@ -251,17 +253,23 @@ class unit_attacking:
         if pygame.time.get_ticks() - self.time_last_hit > 2000:
             self.hit_before = False
 
-    def move(self, tx, ty, secondary_path=None):
-        self.sp = secondary_path
+    def move(self, tx, ty, secondary_path=None, secondary_end_point=None):
+        self.is_there_a_secondary_path = secondary_path
+        print secondary_path, 'gbverrg'
         self.move_path = self.allegiance.parent.pathfinder.get_path((self.position[0], self.position[1]), (tx, ty))
-        if secondary_path:
-            self.move_path = self.move_path + secondary_path
 
         if self.move_path:
-            self.allegiance.parent.game_data.set_as_marked((tx, ty))
-            self.moving = True
-            self.move_progress = 0  # in percent
-            self.cur_direction = self.move_path.pop(0)
+            if self.is_there_a_secondary_path:
+                self.move_path = self.move_path + secondary_path
+                self.allegiance.parent.game_data.set_as_marked(secondary_end_point)
+                self.moving = True
+                self.move_progress = 0  # in percent
+                self.cur_direction = self.move_path.pop(0)
+            else:
+                self.allegiance.parent.game_data.set_as_marked((tx, ty))
+                self.moving = True
+                self.move_progress = 0  # in percent
+                self.cur_direction = self.move_path.pop(0)
 
         self.time_since_last_inc = pygame.time.get_ticks()
         self.dx, self.dy = 0, 0

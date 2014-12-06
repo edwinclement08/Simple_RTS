@@ -21,7 +21,6 @@ class player():
         g = 0
         while g < len(self.units):
             if self.units[g].destroyed and (pygame.time.get_ticks() - self.units[g].time_since_destroyed) > 3000:
-                print "sswefreswfcvjbvzkvh"
                 a = self.units.pop(g)
                 self.parent.game_data.delete_unit(a)
                 del a
@@ -89,13 +88,11 @@ class GameData:
                 self.places_truly_empty[y][x] = not self.places_occupied[y][x] and \
                     self.parent.map.movable_region[y][x] \
                     and not((x, y) in self.marked_place)
-        # print (pygame.time.get_ticks() - qq), "easfwef"
 
     def mini_health_bar(self, unit, pos_x, pos_y):
         health_percent = unit.health*1.0 / unit.total_health
         health_box_total_width = unit.w*20
         health_box_width = health_box_total_width * health_percent
-        #print health_box_width
         red_box = (pos_x + health_box_width, pos_y - 10, health_box_total_width - health_box_width, 3)
         green_box = (pos_x, pos_y - 10, health_box_width, 3)
 
@@ -188,7 +185,6 @@ class GameData:
                     anything_present = True
                     points_of_interest.append((x, y))
         if anything_present:
-            print self.units
             for x, y in points_of_interest:
                 for w in self.units:
                     if (w[0].position[0], w[0].position[1]) == (x, y):
@@ -201,7 +197,6 @@ class GameData:
         return None
 
     def delete_unit(self, unit):
-        # print unit, self.units
         self.units.remove([unit, unit.position[0], unit.position[1]])
         sw, sh = unit.w, unit.h
         x, y = unit.position[0], unit.position[1]

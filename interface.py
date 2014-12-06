@@ -237,11 +237,8 @@ class Interface:
             if not left_of_the_right_end:
                 self.c[0] = self.parent.map.x1-1
         if self.dragging == 1:
-            print self.drag_start
             if self.parent.map.x0 <= self.drag_st_x <= self.parent.map.x1 and \
                     self.parent.map.y0 <= self.drag_st_y <= self.parent.map.y1:
-                print self.drag_st_x, self.drag_st_y, self.c[0]-self.drag_st_x, self.c[1]-self.drag_st_y
-
                 pygame.draw.rect(self.screen, (100, 255, 255), (self.drag_st_x, self.drag_st_y,
                                                                 self.c[0]-self.drag_st_x, self.c[1]-self.drag_st_y), 1)
                 x0, y0 = self.conv(self.drag_st_x, self.drag_st_y)
@@ -259,8 +256,6 @@ class Interface:
         if self.multiple_selected:
             startx, starty, padx, pady = nx-45, ny-8, 5, 5
             number = len(self.multiple_selected)
-            # numx, numy = number % 3,  number / 3
-            # print numx, numy
             dx, dy = 0, 0
             pos = 0
             for imaager in self.image_for_selection:
@@ -372,8 +367,6 @@ class Interface:
             self.current_cursor = self.cursor_images["default"]
         self.screen.blit(self.current_cursor, pygame.mouse.get_pos())
 
-        # print (pygame.time.get_ticks() - qqq)
-
     def process_events(self):
         for event in pygame.event.get():
             if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
@@ -444,18 +437,20 @@ class Interface:
                         self.selected_unit.right_click_handle(*self.conv(event.pos[0], event.pos[1]))
                         pass
                     elif self.multiple_selected:
-                        sub_path = self.parent.game_data.get_spiral_loop(self.conv(event.pos[0], event.pos[1]), len(self.multiple_selected))
+                        current_pos = self.conv(event.pos[0], event.pos[1])
+                        sub_paths = self.parent.game_data.get_spiral_loop(current_pos, len(self.multiple_selected))
                         no, qdx, qdy = 0, 0, 0
                         for t in self.multiple_selected:
                             no += 1
                             qdx, qdy = qdx + t[0].position[0], qdy + t[0].position[1]
                         avgx, avgy = qdx / no, qdy / no
                         sub_path_no = 0
+
+                        master_path = self.parent.pathfinder.get_path((avgx, avgy), current_pos)
                         for wt in self.multiple_selected:
-
-
-
-                    pass
+                            wt[0].move(avgx, avgy, secondary_path=(master_path+list(sub_paths[sub_path_no][1])),
+                                       secondary_end_point=sub_paths[sub_path_no][0])
+                            sub_path_no += 1
             elif event.type == MOUSEBUTTONUP:
                 if self.drag_start:
                     self.drag_end = event.pos

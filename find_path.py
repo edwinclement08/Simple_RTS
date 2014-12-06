@@ -14,6 +14,7 @@ class node:
     distance = 0
     # priority = distance + remaining distance estimate
     priority = 0 # smaller: higher priority
+
     def __init__(self, xPos, yPos, distance, priority):
         self.xPos = xPos
         self.yPos = yPos
@@ -106,8 +107,6 @@ class AStar:
                 xdx = x + dx[i]
                 ydy = y + dy[i]
 
-                #print "(" + str(xdx) + ", " + str(ydy) + ")",
-                #print the_map[ydy][xdx], closed_nodes_map[ydy][xdx]
                 if not (xdx < 0 or xdx > n-1 or ydy < 0 or ydy > m - 1 or the_map[ydy][xdx] == 1 or closed_nodes_map[ydy][xdx] == 1):
                     # generate a child node
 
@@ -156,9 +155,6 @@ class AStar:
         #         if the_invert_map[y][x] =
 
         the_map = [[0 if the_invert_map[uy][ux] else 1 for ux in range(100)] for uy in range(100)]
-
-        #print x0,y0,the_map[y0][x0]
-        #print x1,y1,the_map[y1][x1]
 
         route = self.pathFind(the_map, directions, dx, dy, x0, y0, x1, y1)
         return route
