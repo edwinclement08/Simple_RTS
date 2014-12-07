@@ -36,6 +36,7 @@ class Interface:
 
     def __init__(self, parent):
         pygame.key.set_repeat(50, 100)
+
         self.parent = parent
         self.screen = pygame.Surface(parent.screen_dim).convert()
         self.screen.fill((255, 255, 255))
