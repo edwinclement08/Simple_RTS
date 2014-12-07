@@ -14,7 +14,6 @@ class Map:
     x1, y1 = x_offset + (window_w-1)*20, y_offset + (window_h-2)*20
 
     def __init__(self):
-        pygame.init()
         self.screen = pygame.Surface((self.window_w*20, self.window_h*20)).convert()
         self.screen.fill((255, 255, 255))
         self.screen.set_colorkey((255, 255, 255))

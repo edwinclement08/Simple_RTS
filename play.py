@@ -17,8 +17,8 @@ class Play():
     debugging = False
     game_paused = False
 
-    def __init__(self, master_screen, parent):
-        # self.parent_clock = master_clock
+    def __init__(self, master_screen, master_clock, parent):
+        self.parent_clock = master_clock
         self.master_screen = master_screen
 
         self.screen = pygame.Surface(master_screen.get_size())
@@ -61,9 +61,9 @@ class Play():
         # self.mainloop()
 
     def mainloop(self):
-        Clock = pygame.time.Clock()
         while not self.game_paused:
-            Clock.tick(50)
+            self.parent_clock.tick(50)
+            # print self.parent_clock.get_fps()
 
             self.interface.update()
             self.map.update()
@@ -93,10 +93,10 @@ class Play():
             self.master_screen.blit(self.screen, (0, 0))
             pygame.display.update()
 
-            if pygame.time.get_ticks() - self.game_start >= 1000:
-                print pygame.time.get_ticks(), self.game_start
-                self.game_paused = True
-                self.parent.save_game()
+            # if pygame.time.get_ticks() - self.game_start >= 1000:
+            #     print pygame.time.get_ticks(), self.game_start
+            #     self.game_paused = True
+            #     self.parent.save_game()
 
     def debug(self, *args):
         x, y = args[0], args[1]
@@ -108,10 +108,10 @@ class Menu():
 
     def __init__(self):
         pygame.init()
-        # self.clock = pygame.time.Clock()
+        self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode(self.screen_dim)   # , FULLSCREEN)
 
-        self.play = Play(self.screen, self)
+        self.play = Play(self.screen, self.clock, self)
 
         self.menu_items = {"New game": self.play,
                            "Load game": 89375
@@ -170,7 +170,7 @@ def clock_pickler(clock):
 
 copy_reg.pickle(pygame.Surface, surface_pickler, surface_unpickler)
 copy_reg.pickle(pygame.PixelArray, pixelarray_pickler, pixelarray_unpickler)
-copy_reg.pickle(pygame.time.Clock, clock_pickler, clock_unpickler)
+# copy_reg.pickle(pygame.time.Clock, clock_pickler, clock_unpickler)
 
 
 

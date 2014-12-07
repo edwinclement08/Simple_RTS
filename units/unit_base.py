@@ -16,7 +16,6 @@ class unit_non_attacking:
 
     hit_before = False
     time_last_hit = 0
-    # should_health_be_displayed = False
 
     def __init__(self, allegiance, x, y):
         # data about itself

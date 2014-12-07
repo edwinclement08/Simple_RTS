@@ -1,0 +1,5 @@
+unit_non_attacking:
+    health
+    hit_before
+    time_last_hit
+    position
