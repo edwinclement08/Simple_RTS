@@ -54,7 +54,7 @@ class Play():
 
         #  for debugging
         self.master_debug_list = []
-        self.qwerty = pygame.image.load("units\\gray_out_area.bmp").convert_alpha()
+        self.qwerty = pygame.image.load("units/gray_out_area.bmp").convert_alpha()
 
         self.game_start = pygame.time.get_ticks()
         self.parent = parent

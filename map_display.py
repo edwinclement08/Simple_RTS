@@ -6,8 +6,8 @@ import pygame
 
 
 class Map:
-    image_file = 'Data\\terrain.bmp'
-    data_file = 'Data\\map.json'
+    image_file = 'Data/terrain.bmp'
+    data_file = 'Data/map.json'
     cur_pos = 0, 0
     window_w, window_h = 30, 23        # No. of tiles
     x0, y0 = x_offset, y_offset = 19, 45

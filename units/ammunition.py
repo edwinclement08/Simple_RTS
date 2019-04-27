@@ -22,7 +22,7 @@ class ammunition:
 
 
 class firearms:
-    image_file = "units\\ammunition.bmp"
+    image_file = "units/Bullets.bmp"
     get_speed = {'bullet': 0.005,
                  'ecm': 0.008,
                  'missile': 0.004,

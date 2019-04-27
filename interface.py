@@ -12,26 +12,26 @@ from message_box import *
 
 
 class Interface:
-    data_file = "Data\\interface.json"
-    image_file = "Data\\interface.bmp"
-    title_file = "Data\\title_bar.bmp"
-    box_file = "Data\\box.bmp"
-    mini_box_file = "Data\\mini_box.bmp"
-    context_box_file = "Data\\context_box.bmp"
-    mini_map_file = "Data\\mini_map.bmp"
+    data_file = "Data/interface.json"
+    image_file = "Data/interface.bmp"
+    title_file = "Data/title_bar.bmp"
+    box_file = "Data/box.bmp"
+    mini_box_file = "Data/mini_box.bmp"
+    context_box_file = "Data/context_box.bmp"
+    mini_map_file = "Data/mini_map.bmp"
 
-    gold_file = "Data\\gold.bmp"
-    power_file = "Data\\power.bmp"
+    gold_file = "Data/gold.bmp"
+    power_file = "Data/power.bmp"
 
-    grey_area_file = "units\\gray_out_area.bmp"
-    grey_file = "units\\gray_2_3.bmp"
-    red_file = "units\\red_2_3.bmp"
+    grey_area_file = "units/gray_out_area.bmp"
+    grey_file = "units/gray_2_3.bmp"
+    red_file = "units/red_2_3.bmp"
 
-    cursor_files = {"attack": "Data\\cursors\\attack.png",
-                    "move": "Data\\cursors\\move1.png",
-                    "select": "Data\\cursors\\select.png",
-                    "default": "Data\\cursors\\cursor.png",
-                    "normal": "Data\\cursors\\cursor.png",
+    cursor_files = {"attack": "Data/cursors/attack.png",
+                    "move": "Data/cursors/move1.png",
+                    "select": "Data/cursors/select.png",
+                    "default": "Data/cursors/cursor.png",
+                    "normal": "Data/cursors/cursor.png",
                     }
 
     def __init__(self, parent):
