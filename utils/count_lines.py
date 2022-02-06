@@ -1,7 +1,7 @@
 lis = ["find_path.py",
        "game.py",
        "interface.py",
-       "play.py",
+       "main.py",
        "map_display.py",
        "message_box.py",
        "units/unit_base.py",
