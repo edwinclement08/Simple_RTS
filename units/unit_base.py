@@ -529,7 +529,7 @@ class generator(unit_non_attacking):
 
     power = 0
 
-    image_file = "generator.bmp"
+    image_file = "Generator.bmp"
     w, h = 2, 3
 
     selection_options = {
@@ -594,3 +594,4 @@ class command_center(unit_non_attacking):
 
     def any_other_stuff(self):
         pass
+
