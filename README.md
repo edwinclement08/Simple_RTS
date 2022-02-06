@@ -16,7 +16,7 @@ pyenv virtualenv simple-rts-venv
 ```bash
 pip install -r requirements.txt
 ```
-* Run the demo'
+* Run the demo
 ```bash
 python main.py
 ```
